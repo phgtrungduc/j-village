@@ -1,6 +1,6 @@
 {
-  "name": "kiot-qr-cpanel",
-  "version": "0.0.0",
+  "name": "j-village",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
