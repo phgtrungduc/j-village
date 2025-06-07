@@ -6,17 +6,15 @@ import { Footer } from './component/Common/footer/footer.component';
 import { Header } from './component/Common/header/header.component';
 @Component({
   selector: 'app-root',
-  imports: [
-    RouterOutlet,Footer, Header
-  ],
+  imports: [RouterOutlet, Footer, Header],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
 })
 export class AppComponent extends BaseComponent {
   // isShowSpinner$: Observable<boolean>;
   title = 'kiot-qr-cpanel';
   constructor() {
-    super()
+    super();
     // this.isShowSpinner$ =of();
   }
 }

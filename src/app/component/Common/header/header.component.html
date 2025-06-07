@@ -1,22 +1,30 @@
-<header class="site-header">
-    <div class="container">
-        <a href="/" class="logo">
-            <img src="https://mvillage.vn/wp-content/themes/mvillage/images/logo.svg" alt="M Village Logo" />
-        </a>
+<header class="fixed top-0 left-0 w-full z-50 transition-colors duration-300"
+    [ngClass]="{ 'bg-red-600': isScrolled, 'bg-transparent': !isScrolled }">
+    <div class="flex justify-between items-center px-10 py-4 text-white">
+        <!-- Logo -->
+        <div class="font-bold leading-tight">
+            J VILLAGE<br>
+            <span class="text-sm font-normal">HOTEL</span>
+        </div>
 
-        <nav class="navigation" id="nav-menu">
-            <ul>
+        <!-- Navigation -->
+        <nav>
+            <ul class="flex gap-6">
                 <li><a href="#">Trang chủ</a></li>
-                <li><a href="#">Về M Village</a></li>
-                <li><a href="#">Chi nhánh</a></li>
-                <li><a href="#">Liên hệ</a></li>
+                <li><a href="#">Đặt phòng</a></li>
+                <li><a href="#" class="active">Thương hiệu</a></li>
+                <li><a href="#">Hội viên</a></li>
+                <li><a href="#">Về chúng tôi</a></li>
             </ul>
+
         </nav>
 
-        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+        <!-- Actions -->
+        <div class="flex gap-4 items-center">
+            <button class="border border-white px-3 py-1 rounded-full hover:bg-white hover:text-red-600 transition">
+                Đăng nhập <span>👤</span>
+            </button>
+            <button class="text-2xl">☰</button>
+        </div>
     </div>
 </header>
