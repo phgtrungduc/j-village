@@ -1,7 +1,4 @@
-<header
-  class="fixed top-0 left-0 w-full z-50 transition-colors duration-300"
-  [ngClass]="{ scrolled: isScrolled }"
->
+<header class="fixed top-0 left-0 w-full z-50 transition-colors duration-300" [ngClass]="{ scrolled: isScrolled }">
   <div class="flex justify-between items-center px-10 py-4 header-container">
     <div class="logo font-bold leading-tight">
       <img src="images/logo.png" alt="" style="width: 60px;">
@@ -9,11 +6,12 @@
 
     <nav>
       <ul class="flex gap-6 menu">
-        <li><a href="#">Trang chủ</a></li>
-        <li><a href="#">Đặt phòng</a></li>
-        <li><a href="#" class="active">Thương hiệu</a></li>
-        <li><a href="#">Hội viên</a></li>
-        <li><a href="#">Về chúng tôi</a></li>
+        <li *ngFor="let item of menuItems">
+          <a href="javascript:void(0);" [ngClass]="{ 'active': item.label === activeItemLabel }"
+            (click)="setActiveItem(item.link); $event.preventDefault()">
+            {{ item.label }}
+          </a>
+        </li>
       </ul>
     </nav>
 

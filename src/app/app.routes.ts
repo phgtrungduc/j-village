@@ -1,6 +1,9 @@
 import { Routes } from '@angular/router';
 // import { authGuard } from './guard/auth-guard.guard';
-import { HomePage } from './component/homepage/home-page.component';
+import { HomePage } from './component/Pages/homepage/home-page.component';
+import { OrderComponent } from './component/Pages/order/order.component';
+import { BrandComponent } from './component/Pages/brand/brand.component';
+import { MemberComponent } from './component/Pages/member/member.component';
 
 export const routes: Routes = [
   // {
@@ -14,11 +17,28 @@ export const routes: Routes = [
   //   canActivate: [authGuard]
   // },
   {
-    path: '**',
+    path: '', // Default route
+    redirectTo: 'home', // Redirect to homepage
+    pathMatch: 'full'
+  },
+  {
+    path: 'home',
     component: HomePage,
   },
   {
-    path: '**', // Wildcard route
-    redirectTo: 'retailer',
+    path: 'order',
+    component: OrderComponent,
+  },
+  {
+    path: 'brand',
+    component: BrandComponent,
+  },
+  {
+    path: 'member',
+    component: MemberComponent,
+  },
+  {
+    path: '**',
+    component: HomePage, // Fallback to HomePage for any other unmatched routes
   },
 ];
