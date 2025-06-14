@@ -1,4 +1,51 @@
-// /* You can add global styles to this file, and also import other style files */
-
-@use "assets/scss-core/variables" as *;
+@import "assets/scss-core/variables";
 @import "tailwindcss";
+
+html,
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+* {
+    font-family: inherit;
+}
+
+
+.body-section {
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+
+.btn {
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    // border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-primary {
+    background-color: $primary;
+
+
+    &:hover {
+        background-color: #2d4c3c;
+    }
+}
+
+.btn-secondary {
+    background-color: white;
+    color: $primary;
+
+    &:hover {
+        background-color: rgb(238, 236, 236);
+    }
+}
+
+.btn-rounded {
+    border-radius: 15rem;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
