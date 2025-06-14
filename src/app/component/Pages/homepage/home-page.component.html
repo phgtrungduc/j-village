@@ -27,19 +27,63 @@
     </div>
     <div class="body-section">
         <div class="room-section">
-            <div class="heading m-auto">Khám phá điều mới lạ tại J Village</div>
+            <div class="heading heading-center">Khám phá điều mới lạ tại J Village</div>
             <div class="flex space-between justify-between">
-            <div *ngFor="let room of roomList">
-                <room-card [currentRoom]="room">
-                </room-card>
+                <div *ngFor="let room of roomList | slice:0:3">
+                    <room-card [currentRoom]="room">
+                    </room-card>
+                </div>
             </div>
         </div>
-        </div>
         <div class="room-level-section">
-    
+            <div class="heading">Hạng phòng</div>
+
+            <div class="room-content">
+                <!-- Bộ lọc -->
+                <div class="room-filters">
+                    <button class="filter active">Tất cả các phòng</button>
+                    <button class="filter">Hạng A</button>
+                    <button class="filter">Hạng B</button>
+                    <button class="filter">Hạng Thường</button>
+                </div>
+
+                <div class="w-full">
+                    <!-- Danh sách phòng -->
+                    <div class="room-list">
+                        <div class="room-card"
+                            *ngFor="let room of roomList | paginate: { itemsPerPage: 5, currentPage: page }">
+                            <div class="image" [style.backgroundImage]="'url(' + room.ImageUrl + ')'">
+                                <div class="info">
+                                    <div class="name">{{ room.Name }}</div>
+                                    <span class="link" href="#">Khám phá <span>↗</span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-center">
+                        <pagination-controls (pageChange)="page = $event" previousLabel="" nextLabel="">
+                        </pagination-controls>
+                    </div>
+                </div>
+
+            </div>
         </div>
-        <div class="member-section">
-    
+    </div>
+    <div class="member-section">
+        <div class="overlay">
+            <div class="content">
+                <div class="text">
+                    <p class="subtitle">Trở thành</p>
+                    <p class="title">HỘI VIÊN J VILLAGE MORE</p>
+                    <p class="description">để mở khóa nhiều đặc quyền.</p>
+
+                    <div class="flex gap-2">
+                        <button class="btn btn-secondary btn-rounded">Đặt phòng</button>
+                        <button class="btn btn-primary btn-rounded">Đăng ký hội viên</button>
+                    </div>
+                </div>
+            </div>
         </div>
+
     </div>
 </div>
