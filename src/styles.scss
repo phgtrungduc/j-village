@@ -2,3 +2,41 @@
 
 @use "assets/scss-core/variables" as *;
 @import "tailwindcss";
+
+html,
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+* {
+    font-family: inherit;
+}
+
+
+.body-section {
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+
+.btn {
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    // border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-primary {
+    background-color: #354a21;
+
+
+    &:hover {
+        background-color: #2d4c3c;
+    }
+}
+
+.btn-rounded {
+    border-radius: 15rem;
+}

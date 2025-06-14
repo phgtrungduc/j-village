@@ -6,7 +6,7 @@
                 <h1>JVILLAGE HOUSE</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incididunt ut labore et
                     dolore magna aliqua.</p>
-                <button class="cta-button">Khám phá</button>
+                <button class="btn btn-primary btn-rounded">Khám phá</button>
             </div>
 
             <div class="stats">
@@ -23,6 +23,20 @@
                     <div class="label">Sự kiện</div>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="body-section">
+        <div class="room-section flex space-between justify-between">
+            <div *ngFor="let room of roomList">
+                <room-card [currentRoom]="room">
+                </room-card>
+            </div>
+        </div>
+        <div class="room-level-section">
+    
+        </div>
+        <div class="member-section">
+    
         </div>
     </div>
 </div>
