@@ -26,11 +26,14 @@
         </div>
     </div>
     <div class="body-section">
-        <div class="room-section flex space-between justify-between">
+        <div class="room-section">
+            <div class="heading m-auto">Khám phá điều mới lạ tại J Village</div>
+            <div class="flex space-between justify-between">
             <div *ngFor="let room of roomList">
                 <room-card [currentRoom]="room">
                 </room-card>
             </div>
+        </div>
         </div>
         <div class="room-level-section">
     

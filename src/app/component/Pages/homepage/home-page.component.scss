@@ -1,9 +1,11 @@
+@use 'variables' as *;
+
 .img-backgroud {
   width: 100%;
 }
 
 .hero-section {
-  background-image: url('/images/homepage.png'); 
+  background-image: url('/images/homepage.png');
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -27,6 +29,7 @@
 
   .hero-content {
     max-width: 50%;
+
     h2 {
       font-size: 2rem;
       font-weight: 600;
@@ -56,7 +59,7 @@
 
     .stat-box {
       background-color: rgba(255, 255, 255, 0.8);
-      color: #2d4c3c;
+      color: $primary;
       padding: 1rem 1.5rem;
       border-radius: 1rem;
       text-align: center;
@@ -74,4 +77,14 @@
     }
   }
 }
+.room-section {
 
+}
+
+.heading {
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: $primary;
+}
