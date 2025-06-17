@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { BaseComponent } from '../../../common/base.component';
 import { HttpClient } from '@angular/common/http';
 import { LoginApiService } from '../../../core/api-services/login-api.service';
@@ -18,6 +18,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
   ]
 })
 export class HomePage extends BaseComponent {
+
   roomList: Room[] = [
     {
       Id: 'R001',

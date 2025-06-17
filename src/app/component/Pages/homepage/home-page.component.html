@@ -51,7 +51,7 @@
                     <!-- Danh sách phòng -->
                     <div class="room-list">
                         <div class="room-card"
-                            *ngFor="let room of roomList | paginate: { itemsPerPage: 5, currentPage: page }">
+                            *ngFor="let room of roomList | paginate: { itemsPerPage: 5, currentPage: page, id: 'room-pagination'}">
                             <div class="image" [style.backgroundImage]="'url(' + room.ImageUrl + ')'">
                                 <div class="info">
                                     <div class="name">{{ room.Name }}</div>
@@ -61,8 +61,43 @@
                         </div>
                     </div>
                     <div class="flex justify-center">
-                        <pagination-controls (pageChange)="page = $event" previousLabel="" nextLabel="">
-                        </pagination-controls>
+                        <!-- <pagination-controls (pageChange)="page = $event" paginationTemplate="customTpl">
+                        </pagination-controls> -->
+
+                        <pagination-template #p="paginationApi" id="room-pagination" (pageChange)="page = $event"
+                            (pageBoundsCorrection)="page = $event" class="custom-pagination">
+
+                            <!-- Previous arrow -->
+                            <div class="arrow" [class.disabled]="p.isFirstPage()">
+                                <a *ngIf="!p.isFirstPage()" (click)="p.previous()">←</a>
+                            </div>
+
+                            <!-- Page numbers -->
+                            <div class="page-item" *ngFor="let pageItem of p.pages"
+                                [class.current]="p.getCurrent() === pageItem.value"
+                                [class.ellipsis]="pageItem.label === '...'">
+
+                                <!-- normal page -->
+                                <a *ngIf="p.getCurrent() !== pageItem.value && pageItem.label !== '...'"
+                                    (click)="p.setCurrent(pageItem.value)">
+                                    {{ pageItem.label }}
+                                </a>
+
+                                <!-- current page -->
+                                <span *ngIf="p.getCurrent() === pageItem.value && pageItem.label !== '...'">
+                                    {{ pageItem.label }}
+                                </span>
+
+                                <!-- ellipsis -->
+                                <span *ngIf="pageItem.label === '...'">…</span>
+                            </div>
+
+                            <!-- Next arrow -->
+                            <div class="arrow" [class.disabled]="p.isLastPage()">
+                                <a *ngIf="!p.isLastPage()" (click)="p.next()">→</a>
+                            </div>
+                        </pagination-template>
+
                     </div>
                 </div>
 

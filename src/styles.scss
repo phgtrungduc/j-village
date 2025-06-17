@@ -1,4 +1,19 @@
-@import "assets/scss-core/variables";
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.dev/guide/theming
+@use '@angular/material' as mat;
+
+html {
+  @include mat.theme((
+    color: (
+      theme-type: light,
+      primary: mat.$azure-palette,
+      tertiary: mat.$blue-palette,
+    ),
+    typography: Roboto,
+    density: 0,
+  ));
+}@import "assets/scss-core/variables";
 @import "tailwindcss";
 
 html,
@@ -46,6 +61,63 @@ body {
 
 .btn-rounded {
     border-radius: 15rem;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+
+
+.custom-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-size: 16px;
+
+  .arrow a {
+    font-weight: bold;
+    font-size: 20px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .arrow.disabled a {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
+  .page-item {
+    display: flex;
+    align-items: center;
+
+    a, span {
+      padding: 8px 12px;
+      border-radius: 10px;
+      border: 2px solid transparent;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    a:hover {
+      border-color: orange;
+    }
+
+    &.current span {
+      border: 2px solid orange;
+      color: orange;
+      font-weight: bold;
+    }
+
+    &.ellipsis {
+      pointer-events: none;
+      cursor: default;
+      padding: 0 6px;
+    }
+  }
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

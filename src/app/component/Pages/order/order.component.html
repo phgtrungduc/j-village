@@ -1,3 +1,130 @@
-<div class="order-page">
-  <p>order works!</p>
+<div class="room-page">
+  <!-- Tìm kiếm -->
+  <div class="search-bar">
+    <div class="field">
+      <label>Nhận phòng</label>
+      <input type="date" [(ngModel)]="checkIn" />
+    </div>
+    <div class="field">
+      <label>Trả phòng</label>
+      <input type="date" [(ngModel)]="checkOut" />
+    </div>
+    <div class="field">
+      <label>Khách</label>
+      <input type="text" placeholder="2 Người lớn, 0 Trẻ em" />
+    </div>
+    <button class="search-btn">Tìm phòng</button>
+  </div>
+
+  <div class="content">
+    <!-- Bộ lọc -->
+    <div class="filters">
+      <div class="filter-card">
+        <h4>Giá phòng</h4>
+        <input type="range" min="400000" max="5400000" step="100000" [(ngModel)]="price" />
+        <div class="price">{{ price | number }} VND</div>
+        <button class="reset-btn">Làm mới</button>
+      </div>
+
+      <div class="filter-card">
+        <h4>Hạng phòng</h4>
+        <select [(ngModel)]="category">
+          <option value="">Tất cả các phòng</option>
+          <option value="a">Hạng A</option>
+          <option value="b">Hạng B</option>
+          <option value="thuong">Hạng thường</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Danh sách phòng -->
+    <div class="room-list">
+      <div class="room-card" *ngFor="let room of rooms">
+        <img [src]="room.image" alt="room" />
+        <div class="info">
+          <h3>{{ room.name }}</h3>
+          <div class="price">{{ room.price | number }} VNĐ/đêm</div>
+          <div class="tags">{{ room.tags }}</div>
+          <p class="desc">{{ room.description }}</p>
+          <button class="select-btn">Chọn phòng</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+
+
+<div class="search-bar">
+  <div class="search-item">
+    <span class="label">Nhận phòng</span>
+    <span class="value">06/06/2024</span>
+  </div>
+  <div class="search-item">
+    <span class="label">Trả phòng</span>
+    <span class="value">07/06/2024</span>
+  </div>
+  <div class="search-item">
+    <span class="label">Khách</span>
+    <span class="value">2 Người lớn, 0 Trẻ em, 0 Em bé</span>
+  </div>
+  <button class="search-button">
+    <span class="icon">🔍</span>
+    Tìm phòng
+  </button>
+</div>
+
+
+<div class="price-filter">
+  <div class="header">
+    <div class="title">Giá phòng</div>
+    <mat-icon>expand_more</mat-icon>
+  </div>
+  <div class="subtitle">1 phòng, 1 đêm</div>
+
+  <div class="slider-container">
+    <mat-slider
+      thumbLabel
+      [min]="min"
+      [max]="max"
+      [step]="100000"
+      [(ngModel)]="value"
+    ></mat-slider>
+  </div>
+
+  <div class="price-range">
+    <div class="min-price">{{ min | number }} VND</div>
+    <span>–</span>
+    <div class="max-price">{{ max | number }} VND</div>
+  </div>
+
+  <button class="reset-button">
+    <mat-icon>refresh</mat-icon>
+    Làm mới
+  </button>
+</div>
+
+
+<div class="room-card">
+  <div class="image-wrapper">
+    <img src="assets/img/phong-demo.jpg" alt="Hotel room" />
+  </div>
+
+  <div class="info">
+    <h3 class="title">J VILLAGE PREMIER HOTEL THI SÁCH</h3>
+    <div class="price">1.850.000 VNĐ/đêm</div>
+    <div class="tags">
+      Phù hợp: <span>Nghỉ dưỡng, Công tác ngắn ngày, Staycation</span>
+    </div>
+    <p class="desc">
+      Trải nghiệm một hơi thở Á Đông độc đáo giữa nhịp sống đa sắc màu tại Phố
+      Nhất, Quận 1. M Village Premier Hotel Thi Sách chào đón bạn với 79 căn
+      phòng hiện đại, ngập tràn ánh sáng tự nhiên và tầm nhìn xanh mát từ đường
+      Thi Sách—nơi giao thoa giữa nét...
+    </p>
+
+    <button class="choose-btn">Chọn phòng</button>
+  </div>
+</div>
+
+
+
