@@ -1,5 +1,4 @@
-<div class="room-page">
-  <!-- Tìm kiếm -->
+<!-- <div class="room-page">
   <div class="search-bar">
     <div class="field">
       <label>Nhận phòng</label>
@@ -17,7 +16,6 @@
   </div>
 
   <div class="content">
-    <!-- Bộ lọc -->
     <div class="filters">
       <div class="filter-card">
         <h4>Giá phòng</h4>
@@ -37,7 +35,6 @@
       </div>
     </div>
 
-    <!-- Danh sách phòng -->
     <div class="room-list">
       <div class="room-card" *ngFor="let room of rooms">
         <img [src]="room.image" alt="room" />
@@ -125,6 +122,26 @@
     <button class="choose-btn">Chọn phòng</button>
   </div>
 </div>
+ -->
 
 
-
+<div class="room-order">
+  <div class="search-bar mr-40 ml-40">
+    <div class="search-item">
+      <span class="label">Nhận phòng</span>
+      <span class="value">06/06/2024</span>
+    </div>
+    <div class="search-item">
+      <span class="label">Trả phòng</span>
+      <span class="value">07/06/2024</span>
+    </div>
+    <div class="search-item">
+      <span class="label">Khách</span>
+      <span class="value">2 Người lớn, 0 Trẻ em, 0 Em bé</span>
+    </div>
+    <button class="search-button">
+      <span class="icon">🔍</span>
+      Tìm phòng
+    </button>
+  </div>
+</div>
