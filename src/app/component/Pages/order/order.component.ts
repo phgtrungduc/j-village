@@ -7,11 +7,12 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSlider } from '@angular/material/slider';
 import { MatInputModule } from '@angular/material/input'; // nếu bạn dùng <input matInput>
 import { FormsModule } from '@angular/forms';
-import { MatIcon } from '@angular/material/icon';
+import { MatIcon, MatIconModule } from '@angular/material/icon';
+import { RoomOrderCardComponent } from '../../Share/room-order-card/room-order-card.component';
 @Component({
   selector: 'app-order',
   standalone: true,
-  imports: [CommonModule, MatCardModule, MatSelectModule, MatFormFieldModule, MatInputModule , FormsModule, MatSlider, MatIcon ],
+  imports: [CommonModule, MatCardModule, MatSelectModule, MatFormFieldModule, MatInputModule , FormsModule, MatSlider, MatIconModule , RoomOrderCardComponent],
   templateUrl: './order.component.html',
   styleUrl: './order.component.scss'
 })
@@ -42,7 +43,7 @@ export class OrderComponent extends BaseComponent {
 
   min = 400000;
   max = 5400000;
-  value = 2000000; // Giá chọn mặc định
+  value = 500000; 
 
   constructor() {
     super();

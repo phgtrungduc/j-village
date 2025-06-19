@@ -126,7 +126,7 @@
 
 
 <div class="room-order">
-  <div class="search-bar mr-40 ml-40">
+  <div class="search-bar mr-100 ml-100">
     <div class="search-item">
       <span class="label">Nhận phòng</span>
       <span class="value">06/06/2024</span>
@@ -143,5 +143,43 @@
       <span class="icon">🔍</span>
       Tìm phòng
     </button>
+  </div>
+  <div class="body-section">
+    <div class="wraper flex">
+      <div class="room-list flex-3">
+        <room-order-card></room-order-card>
+        <room-order-card></room-order-card>
+        <room-order-card></room-order-card>
+        <room-order-card></room-order-card>
+        <room-order-card></room-order-card>
+        <room-order-card></room-order-card>
+        <room-order-card></room-order-card>
+      </div>
+      <div class="filter-list flex-1">
+        <div class="price-filter">
+          <div class="header">
+            <div class="title">Giá phòng</div>
+            <mat-icon>expand_more</mat-icon>
+          </div>
+          <div class="subtitle">1 phòng, 1 đêm</div>
+
+          <div class="slider-container">
+            <mat-slider thumbLabel [min]="min" [max]="max" [step]="100000" [(ngModel)]="value"></mat-slider>
+          </div>
+
+          <div class="price-range">
+            <div class="min-price">{{ min }} VND</div>
+            <span>–</span>
+            <div class="max-price">{{ max }} VND</div>
+          </div>
+
+          <button class="reset-button">
+            <mat-icon>refresh</mat-icon>
+            Làm mới
+          </button>
+        </div>
+
+      </div>
+    </div>
   </div>
 </div>
