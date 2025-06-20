@@ -140,7 +140,7 @@
       <span class="value">2 Người lớn, 0 Trẻ em, 0 Em bé</span>
     </div>
     <button class="search-button">
-      <span class="icon">🔍</span>
+      <span class="icon"><mat-icon>search</mat-icon></span>
       Tìm phòng
     </button>
   </div>
@@ -164,7 +164,7 @@
           <div class="subtitle">1 phòng, 1 đêm</div>
 
           <div class="slider-container">
-            <mat-slider thumbLabel [min]="min" [max]="max" [step]="100000" [(ngModel)]="value"></mat-slider>
+            
           </div>
 
           <div class="price-range">
@@ -183,3 +183,7 @@
     </div>
   </div>
 </div>
+
+<mat-slider thumbLabel [min]="min" [max]="max" step="100000">
+  <input matSliderThumb value="value">
+</mat-slider>
