@@ -145,18 +145,13 @@
     </button>
   </div>
   <div class="body-section">
-    <div class="wraper flex">
-      <div class="room-list flex-3">
-        <room-order-card></room-order-card>
-        <room-order-card></room-order-card>
-        <room-order-card></room-order-card>
-        <room-order-card></room-order-card>
-        <room-order-card></room-order-card>
-        <room-order-card></room-order-card>
-        <room-order-card></room-order-card>
+    <div class="wraper flex gap-3">
+      <div class="room-list flex flex-col flex-3 gap-4">
+        <div *ngFor="let room of rooms"><room-order-card [currentRoom]="room"></room-order-card></div>
+        
       </div>
       <div class="filter-list flex-1">
-        <div class="price-filter">
+        <div class="price-filter w-100">
           <div class="header">
             <div class="title">Giá phòng</div>
             <mat-icon>expand_more</mat-icon>
@@ -164,7 +159,7 @@
           <div class="subtitle">1 phòng, 1 đêm</div>
 
           <div class="slider-container">
-            
+
           </div>
 
           <div class="price-range">
@@ -172,6 +167,9 @@
             <span>–</span>
             <div class="max-price">{{ max }} VND</div>
           </div>
+          <mat-slider thumbLabel [min]="min" [max]="max" step="100000" class="w-100">
+            <input matSliderThumb value="value">
+          </mat-slider>
 
           <button class="reset-button">
             <mat-icon>refresh</mat-icon>
@@ -183,7 +181,3 @@
     </div>
   </div>
 </div>
-
-<mat-slider thumbLabel [min]="min" [max]="max" step="100000">
-  <input matSliderThumb value="value">
-</mat-slider>

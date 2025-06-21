@@ -3,5 +3,7 @@ export interface Room {
   ImageUrl: string;
   Description: string;
   Name: string;
-  ShortAddess: string;
+  ShortAddess?: string;
+  Price?: number;
+  Tags?: string;
 }

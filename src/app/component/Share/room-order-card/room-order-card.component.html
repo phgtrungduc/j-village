@@ -1,19 +1,16 @@
 <div class="room-card">
     <div class="image-wrapper">
-        <img src="assets/img/phong-demo.jpg" alt="Hotel room" />
+        <img [src]="currentRoom.ImageUrl ? currentRoom.ImageUrl : 'images/default-room.png'" alt="Hotel room" />
     </div>
 
     <div class="info">
-        <h3 class="title">J VILLAGE PREMIER HOTEL THI SÁCH</h3>
-        <div class="price">1.850.000 VNĐ/đêm</div>
+        <h3 class="title">{{currentRoom.Name}}</h3>
+        <div class="price">{{currentRoom.Price}} VNĐ/đêm</div>
         <div class="tags">
-            Phù hợp: <span>Nghỉ dưỡng, Công tác ngắn ngày, Staycation</span>
+            Phù hợp: <span>{{currentRoom.Tags}}</span>
         </div>
         <p class="desc">
-            Trải nghiệm một hơi thở Á Đông độc đáo giữa nhịp sống đa sắc màu tại Phố
-            Nhất, Quận 1. M Village Premier Hotel Thi Sách chào đón bạn với 79 căn
-            phòng hiện đại, ngập tràn ánh sáng tự nhiên và tầm nhìn xanh mát từ đường
-            Thi Sách—nơi giao thoa giữa nét...
+            {{currentRoom.Description}}
         </p>
 
         <button class="choose-btn btn btn-primary btn-rounded">Chọn phòng</button>

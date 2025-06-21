@@ -100,7 +100,6 @@
       flex: 1;
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      gap: 16px;
 
       .room-card {
         display: flex;
@@ -220,10 +219,10 @@
 .price-filter {
   background: #fff;
   border-radius: 16px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
   padding: 16px;
   width: 100%;
-  max-width: 300px;
+  max-width: 400px;
 
   .header {
     display: flex;
