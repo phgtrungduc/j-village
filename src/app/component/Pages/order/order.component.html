@@ -147,8 +147,47 @@
   <div class="body-section">
     <div class="wraper flex gap-3">
       <div class="room-list flex flex-col flex-3 gap-4">
-        <div *ngFor="let room of rooms"><room-order-card [currentRoom]="room"></room-order-card></div>
-        
+        <div *ngFor="let room of rooms | paginate: { itemsPerPage: 5, currentPage: page, id: 'room-pagination'}">
+          <room-order-card [currentRoom]="room"></room-order-card>
+        </div>
+        <div class="flex justify-center">
+          <!-- <pagination-controls (pageChange)="page = $event" paginationTemplate="customTpl">
+                        </pagination-controls> -->
+
+          <pagination-template #p="paginationApi" id="room-pagination" (pageChange)="page = $event"
+            (pageBoundsCorrection)="page = $event" class="custom-pagination">
+
+            <!-- Previous arrow -->
+            <div class="arrow" [class.disabled]="p.isFirstPage()">
+              <a *ngIf="!p.isFirstPage()" (click)="p.previous()">←</a>
+            </div>
+
+            <!-- Page numbers -->
+            <div class="page-item" *ngFor="let pageItem of p.pages" [class.current]="p.getCurrent() === pageItem.value"
+              [class.ellipsis]="pageItem.label === '...'">
+
+              <!-- normal page -->
+              <a *ngIf="p.getCurrent() !== pageItem.value && pageItem.label !== '...'"
+                (click)="p.setCurrent(pageItem.value)">
+                {{ pageItem.label }}
+              </a>
+
+              <!-- current page -->
+              <span *ngIf="p.getCurrent() === pageItem.value && pageItem.label !== '...'">
+                {{ pageItem.label }}
+              </span>
+
+              <!-- ellipsis -->
+              <span *ngIf="pageItem.label === '...'">…</span>
+            </div>
+
+            <!-- Next arrow -->
+            <div class="arrow" [class.disabled]="p.isLastPage()">
+              <a *ngIf="!p.isLastPage()" (click)="p.next()">→</a>
+            </div>
+          </pagination-template>
+
+        </div>
       </div>
       <div class="filter-list flex-1">
         <div class="price-filter w-100">

@@ -13,6 +13,6 @@
             {{currentRoom.Description}}
         </p>
 
-        <button class="choose-btn btn btn-primary btn-rounded">Chọn phòng</button>
+        <button class="choose-btn btn btn-primary btn-rounded" [routerLink]="['/room', currentRoom.Id]">Chọn phòng</button>
     </div>
 </div>

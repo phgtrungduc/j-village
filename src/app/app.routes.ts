@@ -3,6 +3,7 @@ import { Routes } from '@angular/router';
 import { HomePage } from './component/Pages/homepage/home-page.component';
 import { OrderComponent } from './component/Pages/order/order.component';
 import { BrandComponent } from './component/Pages/brand/brand.component';
+import { RoomDetailComponent } from './component/Pages/room-detail/room-detail.component';
 import { MemberComponent } from './component/Pages/member/member.component';
 
 export const routes: Routes = [
@@ -32,6 +33,11 @@ export const routes: Routes = [
   {
     path: 'brand',
     component: BrandComponent,
+  },
+  {
+    // Route mới cho RoomDetailComponent, nhận Id phòng qua tham số 'id'
+    path: 'room/:id',
+    component: RoomDetailComponent,
   },
   {
     path: 'member',
