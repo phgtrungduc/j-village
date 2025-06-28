@@ -4,18 +4,16 @@ import { HttpClient } from '@angular/common/http';
 import { LoginApiService } from '../../../core/api-services/login-api.service';
 import { LoggerService } from '../../../common/service/logger.service';
 import { Router } from '@angular/router';
-import { Footer } from '../../Common/footer/footer.component';
-import { Header } from '../../Common/header/header.component';
 import { RoomCardComponent } from '../../Share/room-card/room-card.component';
 import { Room } from '../../../model/room.model';
 import { CommonModule } from '@angular/common';
 import { NgxPaginationModule } from 'ngx-pagination';
+
 @Component({
   selector: 'home-page',
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.scss',
-  imports: [Footer, Header, RoomCardComponent, CommonModule, NgxPaginationModule
-  ]
+  imports: [RoomCardComponent, CommonModule, NgxPaginationModule]
 })
 export class HomePage extends BaseComponent {
 

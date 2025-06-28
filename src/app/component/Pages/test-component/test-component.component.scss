@@ -1,0 +1,38 @@
+@use 'variables' as *;
+@use 'sass:color';
+
+// Component specific styles
+.test-component {
+  // Your styles here
+  
+  .header {
+    background: linear-gradient(135deg, $primary-color, $secondary-color);
+  }
+  
+  .content {
+    min-height: 400px;
+  }
+  
+  // Responsive design
+  @media (max-width: 768px) {
+    .container {
+      padding: 1rem;
+    }
+  }
+}
+
+// Custom animations
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-out;
+}

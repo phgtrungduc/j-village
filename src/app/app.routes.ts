@@ -5,6 +5,7 @@ import { OrderComponent } from './component/Pages/order/order.component';
 import { BrandComponent } from './component/Pages/brand/brand.component';
 import { RoomDetailComponent } from './component/Pages/room-detail/room-detail.component';
 import { MemberComponent } from './component/Pages/member/member.component';
+import { CustomButtonDemoComponent } from './component/Share/custom-button/custom-button-demo.component';
 
 export const routes: Routes = [
   // {
@@ -42,6 +43,10 @@ export const routes: Routes = [
   {
     path: 'member',
     component: MemberComponent,
+  },
+  {
+    path: 'button-demo',
+    component: CustomButtonDemoComponent,
   },
   {
     path: '**',

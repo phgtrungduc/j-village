@@ -1,0 +1,36 @@
+<button 
+  [type]="type"
+  [disabled]="disabled || loading"
+  [class]="buttonClasses"
+  (click)="onClick()"
+  (mouseenter)="onMouseEnter()"
+  (mouseleave)="onMouseLeave()"
+  class="custom-button">
+  
+  <!-- Loading Spinner -->
+  <div *ngIf="loading" class="custom-button__spinner">
+    <div class="custom-button__spinner-inner"></div>
+  </div>
+
+  <!-- Icon Left -->
+  <i *ngIf="icon && iconPosition === 'left' && !loading" 
+     [class]="iconClasses + ' ' + icon"
+     class="custom-button__icon custom-button__icon--left">
+  </i>
+
+  <!-- Button Text -->
+  <span *ngIf="!loading" class="custom-button__text">
+    {{ text }}
+  </span>
+
+  <!-- Icon Right -->
+  <i *ngIf="icon && iconPosition === 'right' && !loading" 
+     [class]="iconClasses + ' ' + icon"
+     class="custom-button__icon custom-button__icon--right">
+  </i>
+
+  <!-- Loading Text -->
+  <span *ngIf="loading" class="custom-button__text">
+    Loading...
+  </span>
+</button> 

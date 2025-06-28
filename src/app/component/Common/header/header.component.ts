@@ -17,7 +17,8 @@ export class Header extends BaseComponent implements OnInit, OnDestroy {
     { label: 'Trang chủ', link: 'home' }, // Updated link to match app.routes.ts
     { label: 'Đặt phòng', link: 'order' },
     { label: 'Thương hiệu', link: 'brand' },
-    { label: 'Hội viên', link: 'member' }
+    { label: 'Hội viên', link: 'member' },
+    { label: 'Button Demo', link: 'button-demo' }
   ];
   activeItemLabel?: string; // Will be set based on the current route
 
