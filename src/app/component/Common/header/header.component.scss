@@ -1,4 +1,4 @@
-@use 'variables' as *;
+@use "../../../../assets/scss-core/variables" as *;
 header {
   // background-color: transparent;
   background-color: $primary;
@@ -20,12 +20,12 @@ header {
         transition: color 0.3s;
 
         &:hover {
-          color: #fb923c; // Tailwind orange-400
+          color: $secondary;
         }
 
         &.active {
-          color: #fb923c;
-          border-bottom: 2px solid #fb923c;
+          color: $secondary;
+          border-bottom: 2px solid $secondary;
         }
       }
     }
@@ -41,7 +41,7 @@ header {
 
         &:hover {
           background: white;
-          color: #dc2626; // red-600
+          color: $danger;
         }
       }
     }
@@ -57,12 +57,12 @@ header {
         color: black;
 
         &:hover {
-          color: #fb923c;
+          color: $secondary;
         }
 
         &.active {
-          color: #fb923c;
-          border-bottom: 2px solid #fb923c;
+          color: $secondary;
+          border-bottom: 2px solid $secondary;
         }
       }
 

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { BaseComponent } from '../../../common/base.component';
 import { CommonModule } from '@angular/common';
+import { MemberSectionComponent } from '../../Share/member-section/member-section.component';
 
 interface RoomType {
   id: string;
@@ -19,7 +20,7 @@ interface Location {
 @Component({
   selector: 'app-brand',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, MemberSectionComponent],
   templateUrl: './brand.component.html',
   styleUrl: './brand.component.scss'
 })

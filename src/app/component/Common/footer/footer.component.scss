@@ -1,3 +1,5 @@
+@use "../../../../assets/scss-core/variables" as *;
+
 footer {
   a i {
     font-size: 0.75rem; // text-sm
@@ -7,7 +9,7 @@ footer {
     transition: all 0.3s ease;
 
     &:hover {
-      background-color: #d1d1d1; // nhẹ hơn một chút
+      background-color: lighten($gray, 45%);
     }
   }
 

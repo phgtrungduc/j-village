@@ -1,3 +1,5 @@
+@use "assets/scss-core/variables" as *;
+
 .loading-wrapper {
   text-align: center;
   position: fixed;
@@ -31,7 +33,7 @@
 
     .spinner-icon {
       animation-play-state: running;
-      border: 3px solid #fff;
+      border: 3px solid $white;
       animation: rotate 1s linear infinite;
       border-left-color: transparent;
       -webkit-border-radius: 99px;
@@ -45,7 +47,7 @@
       font-size: 24px;
       margin: auto;
       z-index: 999999;
-      color: #fff;
+      color: $white;
       line-height: 1;
       transform: scale(0) translate3d(0, 0, 0);
       position: absolute;
@@ -78,7 +80,7 @@
     }
 
     &:before {
-      background-color: #677484;
+      background-color: $gray;
       z-index: 999997;
     }
 

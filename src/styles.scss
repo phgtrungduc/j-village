@@ -46,7 +46,7 @@ body {
 
 
     &:hover {
-        background-color: #2d4c3c;
+        background-color: darken($primary, 10%);
     }
 }
 

@@ -1,8 +1,8 @@
-@use 'variables' as *;
+@use "../../../../assets/scss-core/variables" as *;
 
 .room-card {
   display: flex;
-  background: #fff;
+  background: $white;
   border-radius: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
   overflow: hidden;
@@ -32,29 +32,29 @@
     .title {
       font-size: 16px;
       font-weight: 600;
-      color: #2d4b27;
+      color: $primary;
       margin: 0 0 8px;
     }
 
     .price {
       font-size: 20px;
       font-weight: bold;
-      color: #f7941d;
+      color: $secondary;
       margin-bottom: 6px;
     }
 
     .tags {
       font-size: 13px;
-      color: #2d4b27;
+      color: $primary;
 
       span {
-        color: #43a047;
+        color: $success;
       }
     }
 
     .desc {
       font-size: 13px;
-      color: #666;
+      color: $gray;
       margin: 12px 0;
       line-height: 1.5;
       max-height: 3.6em;
@@ -65,8 +65,8 @@
     .choose-btn {
       align-self: flex-start;
       padding: 8px 16px;
-    //   background-color: #2d4b27;
-    //   color: white;
+    //   background-color: $primary;
+    //   color: $white;
     //   border: none;
     //   border-radius: 20px;
     //   cursor: pointer;
@@ -74,7 +74,7 @@
       transition: background 0.2s;
 
     //   &:hover {
-    //     background-color: #1b3217;
+    //     background-color: darken($primary, 10%);
     //   }
     }
   }
