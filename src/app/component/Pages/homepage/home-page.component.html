@@ -51,7 +51,7 @@
                     <!-- Danh sách phòng -->
                     <div class="room-list">
                         <div class="room-card"
-                            *ngFor="let room of roomList | paginate: { itemsPerPage: 5, currentPage: page, id: 'room-pagination'}">
+                            *ngFor="let room of roomList | paginate: { itemsPerPage: 4, currentPage: page, id: 'room-pagination'}">
                             <div class="image" [style.backgroundImage]="'url(' + room.ImageUrl + ')'">
                                 <div class="info">
                                     <div class="name">{{ room.Name }}</div>
@@ -104,5 +104,25 @@
             </div>
         </div>
     </div>
+
+    <!-- Stories Section -->
+    <div class="stories-section">
+        <div class="heading heading-center">Bộ sưu tập những câu chuyện tại J Village</div>
+        <div class="stories-grid">
+            <div class="story-column column-1">
+                <div class="story-image story-1" [style.backgroundImage]="'url(' + storiesList[0].imageUrl + ')'"></div>
+                <div class="story-image story-2" [style.backgroundImage]="'url(' + storiesList[1].imageUrl + ')'"></div>
+            </div>
+            <div class="story-column column-2">
+                <div class="story-image story-3" [style.backgroundImage]="'url(' + storiesList[2].imageUrl + ')'"></div>
+                <div class="story-image story-4" [style.backgroundImage]="'url(' + storiesList[3].imageUrl + ')'"></div>
+            </div>
+            <div class="story-column column-3">
+                <div class="story-image story-5" [style.backgroundImage]="'url(' + storiesList[4].imageUrl + ')'"></div>
+                <div class="story-image story-6" [style.backgroundImage]="'url(' + storiesList[5].imageUrl + ')'"></div>
+            </div>
+        </div>
+    </div>
+
     <app-member-section></app-member-section>
 </div>

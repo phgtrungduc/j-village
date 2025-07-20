@@ -110,6 +110,46 @@ export class HomePage extends BaseComponent {
   //paging 
   page = 1;
 
+  // Stories section data
+  storiesList = [
+    {
+      id: 1,
+      imageUrl: 'images/stories/1.webp',
+      title: 'Không gian làm việc hiện đại',
+      description: 'Phòng ngủ sáng sủa với không gian làm việc tiện nghi'
+    },
+    {
+      id: 2,
+      imageUrl: 'images/stories/2.webp',
+      title: 'Thiết kế tối giản',
+      description: 'Phòng studio với cửa sổ vòm và ánh sáng tự nhiên'
+    },
+    {
+      id: 3,
+      imageUrl: 'images/stories/3.webp',
+      title: 'Phòng khách ấm cúng',
+      description: 'Không gian sinh hoạt chung với thiết kế hiện đại'
+    },
+    {
+      id: 4,
+      imageUrl: 'images/stories/4.webp',
+      title: 'Tiệc nướng ngoài trời',
+      description: 'Khu vực BBQ với không gian xanh mát'
+    },
+    {
+      id: 5,
+      imageUrl: 'images/stories/5.webp',
+      title: 'View thành phố tuyệt đẹp',
+      description: 'Phòng ngủ với view toàn cảnh thành phố'
+    },
+    {
+      id: 6,
+      imageUrl: 'images/stories/6.webp',
+      title: 'Không gian sang trọng',
+      description: 'Phòng khách với thiết kế tinh tế và view đẹp'
+    }
+  ];
+
   constructor(private httpClient: HttpClient,
     private loginService : LoginApiService,
     private logService : LoggerService,

@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { AmenityItemComponent } from '../../Share/amenity-item/amenity-item.component';
+import { OtherRoomCardComponent } from '../../Share/other-room-card/other-room-card.component';
 
 @Component({
   selector: 'room-detail',
-  imports: [CommonModule],
+  imports: [CommonModule, AmenityItemComponent, OtherRoomCardComponent],
   templateUrl: './room-detail.component.html',
   styleUrl: './room-detail.component.scss'
 })
