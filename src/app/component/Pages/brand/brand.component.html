@@ -13,16 +13,13 @@
         </div>
     </div>
     <div class="body-section">
-        <div class="room-section">
+        <div class="room-section">      
             <div class="room-tabs">
                 <button class="tab-btn" [class.active]="activeTab === 'all'" (click)="changeTab('all')">Tất cả các
                     phòng</button>
-                <button class="tab-btn" [class.active]="activeTab === 'classA'" (click)="changeTab('classA')">Hạng
-                    A</button>
-                <button class="tab-btn" [class.active]="activeTab === 'classB'" (click)="changeTab('classB')">Hạng
-                    B</button>
-                <button class="tab-btn" [class.active]="activeTab === 'standard'" (click)="changeTab('standard')">Hạng
-                    Thường</button>
+                <button class="tab-btn" [class.active]="activeTab === 'Signature'" (click)="changeTab('Signature')">Signature by J Village</button>
+                <button class="tab-btn" [class.active]="activeTab === 'JVillageHotel'" (click)="changeTab('JVillageHotel')">J Village Hotel</button>
+                <button class="tab-btn" [class.active]="activeTab === 'CityView'" (click)="changeTab('CityView')">CityView by J Village</button>
                 <div class="room-tabs-bottom-line"></div>
             </div>
             <div class="room-display" *ngIf="visibleRoomTypes.length">
@@ -31,7 +28,7 @@
                         <div class="room-info">
                             <div class="room-title">{{ room.title }}</div>
                             <span class="room-description">{{ room.description }}</span>
-                            <button class="view-btn">Xem phí {{ room.title }} &rarr;</button>
+                            <button (click)="navigateToOrder()" class="view-btn">{{ room.title }} &rarr;</button>
                         </div>
                         <div class="room-image">
                             <img [src]="room.image" [alt]="room.title">
@@ -41,9 +38,6 @@
                         <div class="location-card" *ngFor="let location of room.locations">
                             <div class="location-image">
                                 <img [src]="location.image" [alt]="location.name">
-                                <div class="location-name">
-                                    {{ location.name }}<br>{{ location.address }}
-                                </div>
                                 <div class="arrow-overlay">
                                     <span class="arrow">→</span>
                                 </div>
