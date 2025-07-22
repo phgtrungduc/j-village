@@ -170,18 +170,7 @@
 
 
 
-.heading {
-  font-weight: 600;
-  font-size: 64px;
-  line-height: 140%;
-  letter-spacing: 0%;
-  color: $primary;
-  margin: 2rem 0 2rem 0;
-}
-
-.heading-center {
-  text-align: center;
-}
+// Removed old heading styles - now using typography.scss
 
 // Stories Section
 .stories-section {
