@@ -297,6 +297,7 @@
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: clamp(1rem, 3vw, 1.5rem);
   margin-top: clamp(1rem, 3vw, 1.5rem);
+  margin-bottom: 0.1rem;
   width: 100%;
   max-width: 90%;
   margin-left: auto;
