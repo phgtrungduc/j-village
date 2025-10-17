@@ -20,6 +20,57 @@ import { NgxPaginationModule } from 'ngx-pagination';
 })
 export class HomePage extends BaseComponent {
 
+  // Room classes data
+  roomClasses = [
+    {
+      id: 'all',
+      name: 'Tất cả các phòng',
+      rooms: []
+    },
+    {
+      id: 'deluxe',
+      name: 'Deluxe Room',
+      description: 'Phòng Deluxe sang trọng',
+      rooms: [
+        { name: 'Deluxe P 301', imageUrl: 'images/room-class/DeluxeRoom/P301/R4_00807.jpg' },
+        { name: 'Deluxe P 401', imageUrl: 'images/room-class/DeluxeRoom/P401/R4_00544.jpg' },
+        { name: 'Deluxe P 501', imageUrl: 'images/room-class/DeluxeRoom/P501/R4_00378.jpg' }
+      ]
+    },
+    {
+      id: 'eclass',
+      name: 'E Class',
+      description: 'Phòng E Class hiện đại',
+      rooms: [
+        { name: 'Black Pink', imageUrl: 'images/room-class/ECLASS/BlackPink/R4_00195.jpg' },
+        { name: 'Pink Flower', imageUrl: 'images/room-class/ECLASS/PinkFlower/R4_00311.jpg' },
+        { name: 'Play Boy', imageUrl: 'images/room-class/ECLASS/PlayBoy/R4_00252.jpg' }
+      ]
+    },
+    {
+      id: 'sclass',
+      name: 'S Class',
+      description: 'Phòng S Class đẳng cấp',
+      rooms: [
+        { name: 'S Class 50 ST - 1', imageUrl: 'images/room-class/SCLASS/50ST/R4_00014.jpg' },
+        { name: 'S Class 50 ST - 2', imageUrl: 'images/room-class/SCLASS/50ST/R4_00080.jpg' },
+        { name: 'S Class 50 ST - 3', imageUrl: 'images/room-class/SCLASS/50ST/R4_00106.jpg' }
+      ]
+    },
+    {
+      id: 'superior',
+      name: 'Superior Room',
+      description: 'Phòng Superior tiện nghi',
+      rooms: [
+        { name: 'Superior P 202', imageUrl: 'images/room-class/SuperiorRoom/P202/R4_00443.jpg' },
+        { name: 'Superior P 302', imageUrl: 'images/room-class/SuperiorRoom/P302/R4_00708.jpg' },
+        { name: 'Superior P 402', imageUrl: 'images/room-class/SuperiorRoom/P402/R4_00598.jpg' }
+      ]
+    }
+  ];
+
+  activeRoomClass = 'all';
+
   roomList: Room[] = [
     {
       Id: 'R001',
@@ -114,39 +165,39 @@ export class HomePage extends BaseComponent {
   storiesList = [
     {
       id: 1,
-      imageUrl: 'images/stories/1.webp',
-      title: 'Không gian làm việc hiện đại',
-      description: 'Phòng ngủ sáng sủa với không gian làm việc tiện nghi'
+      imageUrl: 'images/room-class/DeluxeRoom/P301/R4_00807.jpg',
+      title: 'Deluxe Room P301',
+      description: 'Phòng Deluxe sang trọng với thiết kế hiện đại'
     },
     {
       id: 2,
-      imageUrl: 'images/stories/2.webp',
-      title: 'Thiết kế tối giản',
-      description: 'Phòng studio với cửa sổ vòm và ánh sáng tự nhiên'
+      imageUrl: 'images/room-class/DeluxeRoom/P301/R4_00834.jpg',
+      title: 'Deluxe Room View',
+      description: 'Không gian rộng rãi và thoải mái'
     },
     {
       id: 3,
-      imageUrl: 'images/stories/3.webp',
-      title: 'Phòng khách ấm cúng',
-      description: 'Không gian sinh hoạt chung với thiết kế hiện đại'
+      imageUrl: 'images/room-class/ECLASS/BlackPink/R4_00195.jpg',
+      title: 'E Class - Black Pink',
+      description: 'Phong cách hiện đại và cá tính'
     },
     {
       id: 4,
-      imageUrl: 'images/stories/4.webp',
-      title: 'Tiệc nướng ngoài trời',
-      description: 'Khu vực BBQ với không gian xanh mát'
+      imageUrl: 'images/room-class/ECLASS/PinkFlower/R4_00311.jpg',
+      title: 'E Class - Pink Flower',
+      description: 'Thiết kế lãng mạn và tinh tế'
     },
     {
       id: 5,
-      imageUrl: 'images/stories/5.webp',
-      title: 'View thành phố tuyệt đẹp',
-      description: 'Phòng ngủ với view toàn cảnh thành phố'
+      imageUrl: 'images/room-class/SCLASS/50ST/R4_00014.jpg',
+      title: 'S Class Premium',
+      description: 'Đẳng cấp và sang trọng bậc nhất'
     },
     {
       id: 6,
-      imageUrl: 'images/stories/6.webp',
-      title: 'Không gian sang trọng',
-      description: 'Phòng khách với thiết kế tinh tế và view đẹp'
+      imageUrl: 'images/room-class/SuperiorRoom/P202/R4_00443.jpg',
+      title: 'Superior Room',
+      description: 'Tiện nghi đầy đủ cho nghỉ dưỡng'
     }
   ];
 
@@ -156,5 +207,19 @@ export class HomePage extends BaseComponent {
     private router: Router
   ){
     super();
+  }
+
+  changeRoomClass(classId: string): void {
+    this.activeRoomClass = classId;
+    this.page = 1; // Reset to first page when changing filter
+  }
+
+  get filteredRooms() {
+    if (this.activeRoomClass === 'all') {
+      // Return all rooms from all classes
+      return this.roomClasses.slice(1).flatMap(rc => rc.rooms);
+    }
+    const roomClass = this.roomClasses.find(rc => rc.id === this.activeRoomClass);
+    return roomClass ? roomClass.rooms : [];
   }
 }

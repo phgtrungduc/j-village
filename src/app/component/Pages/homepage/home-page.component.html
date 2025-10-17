@@ -41,20 +41,24 @@
             <div class="room-content">
                 <!-- Bộ lọc -->
                 <div class="room-filters">
-                    <button class="filter active">Tất cả các phòng</button>
-                    <button class="filter">Hạng A</button>
-                    <button class="filter">Hạng B</button>
-                    <button class="filter">Hạng Thường</button>
+                    <button 
+                        *ngFor="let roomClass of roomClasses" 
+                        class="filter" 
+                        [class.active]="activeRoomClass === roomClass.id"
+                        (click)="changeRoomClass(roomClass.id)">
+                        {{ roomClass.name }}
+                    </button>
                 </div>
 
                 <div class="w-full">
                     <!-- Danh sách phòng -->
                     <div class="room-list">
                         <div class="room-card"
-                            *ngFor="let room of roomList | paginate: { itemsPerPage: 4, currentPage: page, id: 'room-pagination'}">
-                            <div class="image" [style.backgroundImage]="'url(' + room.ImageUrl + ')'">
+                            *ngFor="let room of filteredRooms | paginate: { itemsPerPage: 4, currentPage: page, id: 'room-pagination'}">
+                            <div class="image">
+                                <img [src]="room.imageUrl" [alt]="room.name" loading="lazy">
                                 <div class="info">
-                                    <div class="name">{{ room.Name }}</div>
+                                    <div class="name">{{ room.name }}</div>
                                     <span class="link" href="#">Khám phá <span>↗</span></span>
                                 </div>
                             </div>
