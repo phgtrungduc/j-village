@@ -37,26 +37,26 @@ export class HomePage extends BaseComponent {
         { name: 'Deluxe P 501', imageUrl: 'images/room-class/DeluxeRoom/P501/R4_00378.jpg' }
       ]
     },
-    {
-      id: 'eclass',
-      name: 'E Class',
-      description: 'Phòng E Class hiện đại',
-      rooms: [
-        { name: 'Black Pink', imageUrl: 'images/room-class/ECLASS/BlackPink/R4_00195.jpg' },
-        { name: 'Pink Flower', imageUrl: 'images/room-class/ECLASS/PinkFlower/R4_00311.jpg' },
-        { name: 'Play Boy', imageUrl: 'images/room-class/ECLASS/PlayBoy/R4_00252.jpg' }
-      ]
-    },
-    {
-      id: 'sclass',
-      name: 'S Class',
-      description: 'Phòng S Class đẳng cấp',
-      rooms: [
-        { name: 'S Class 50 ST - 1', imageUrl: 'images/room-class/SCLASS/50ST/R4_00014.jpg' },
-        { name: 'S Class 50 ST - 2', imageUrl: 'images/room-class/SCLASS/50ST/R4_00080.jpg' },
-        { name: 'S Class 50 ST - 3', imageUrl: 'images/room-class/SCLASS/50ST/R4_00106.jpg' }
-      ]
-    },
+    // {
+    //   id: 'eclass',
+    //   name: 'E Class',
+    //   description: 'Phòng E Class hiện đại',
+    //   rooms: [
+    //     { name: 'Black Pink', imageUrl: 'images/room-class/ECLASS/BlackPink/R4_00195.jpg' },
+    //     { name: 'Pink Flower', imageUrl: 'images/room-class/ECLASS/PinkFlower/R4_00311.jpg' },
+    //     { name: 'Play Boy', imageUrl: 'images/room-class/ECLASS/PlayBoy/R4_00252.jpg' }
+    //   ]
+    // },
+    // {
+    //   id: 'sclass',
+    //   name: 'S Class',
+    //   description: 'Phòng S Class đẳng cấp',
+    //   rooms: [
+    //     { name: 'S Class 50 ST - 1', imageUrl: 'images/room-class/SCLASS/50ST/R4_00014.jpg' },
+    //     { name: 'S Class 50 ST - 2', imageUrl: 'images/room-class/SCLASS/50ST/R4_00080.jpg' },
+    //     { name: 'S Class 50 ST - 3', imageUrl: 'images/room-class/SCLASS/50ST/R4_00106.jpg' }
+    //   ]
+    // },
     {
       id: 'superior',
       name: 'Superior Room',

@@ -50,52 +50,52 @@ export class BrandComponent extends BaseComponent {
         },
       ] 
     },
-    EClass: {
-      id: 'EClass',
-      title: 'E Class',
-      description: 'Phòng E Class với thiết kế độc đáo, phong cách hiện đại và không gian sống động. Mỗi phòng mang một chủ đề riêng biệt, tạo nên trải nghiệm lưu trú khác biệt và đầy cảm hứng.',
-      image: 'images/room-class/ECLASS/BlackPink/R4_00195.jpg',
-      locations: [
-        {
-          name: 'E Class - Black Pink',
-          address: 'Phong cách hiện đại',
-          image: 'images/room-class/ECLASS/BlackPink/R4_00214.jpg'
-        },
-        {
-          name: 'E Class - Pink Flower',
-          address: 'Phong cách lãng mạn',
-          image: 'images/room-class/ECLASS/PinkFlower/R4_00311.jpg'
-        },
-        {
-          name: 'E Class - Play Boy',
-          address: 'Phong cách cá tính',
-          image: 'images/room-class/ECLASS/PlayBoy/R4_00252.jpg'
-        }
-      ]
-    },
-    SClass: {
-      id: 'SClass',
-      title: 'S Class',
-      description: 'Phòng S Class đẳng cấp với không gian rộng lớn, thiết kế sang trọng và dịch vụ đặc biệt. Đây là lựa chọn hoàn hảo cho những ai tìm kiếm trải nghiệm lưu trú cao cấp nhất.',
-      image: 'images/room-class/SCLASS/50ST/R4_00014.jpg',
-      locations: [
-        {
-          name: 'S Class - 50 ST',
-          address: 'Phòng đặc biệt',
-          image: 'images/room-class/SCLASS/50ST/R4_00080.jpg'
-        },
-        {
-          name: 'S Class - 50 ST',
-          address: 'Không gian sang trọng',
-          image: 'images/room-class/SCLASS/50ST/R4_00106.jpg'
-        },
-        {
-          name: 'S Class - 50 ST',
-          address: 'Tiện nghi đẳng cấp',
-          image: 'images/room-class/SCLASS/50ST/R4_00119.jpg'
-        }
-      ] 
-    },
+    // EClass: {
+    //   id: 'EClass',
+    //   title: 'E Class',
+    //   description: 'Phòng E Class với thiết kế độc đáo, phong cách hiện đại và không gian sống động. Mỗi phòng mang một chủ đề riêng biệt, tạo nên trải nghiệm lưu trú khác biệt và đầy cảm hứng.',
+    //   image: 'images/room-class/ECLASS/BlackPink/R4_00195.jpg',
+    //   locations: [
+    //     {
+    //       name: 'E Class - Black Pink',
+    //       address: 'Phong cách hiện đại',
+    //       image: 'images/room-class/ECLASS/BlackPink/R4_00214.jpg'
+    //     },
+    //     {
+    //       name: 'E Class - Pink Flower',
+    //       address: 'Phong cách lãng mạn',
+    //       image: 'images/room-class/ECLASS/PinkFlower/R4_00311.jpg'
+    //     },
+    //     {
+    //       name: 'E Class - Play Boy',
+    //       address: 'Phong cách cá tính',
+    //       image: 'images/room-class/ECLASS/PlayBoy/R4_00252.jpg'
+    //     }
+    //   ]
+    // },
+    // SClass: {
+    //   id: 'SClass',
+    //   title: 'S Class',
+    //   description: 'Phòng S Class đẳng cấp với không gian rộng lớn, thiết kế sang trọng và dịch vụ đặc biệt. Đây là lựa chọn hoàn hảo cho những ai tìm kiếm trải nghiệm lưu trú cao cấp nhất.',
+    //   image: 'images/room-class/SCLASS/50ST/R4_00014.jpg',
+    //   locations: [
+    //     {
+    //       name: 'S Class - 50 ST',
+    //       address: 'Phòng đặc biệt',
+    //       image: 'images/room-class/SCLASS/50ST/R4_00080.jpg'
+    //     },
+    //     {
+    //       name: 'S Class - 50 ST',
+    //       address: 'Không gian sang trọng',
+    //       image: 'images/room-class/SCLASS/50ST/R4_00106.jpg'
+    //     },
+    //     {
+    //       name: 'S Class - 50 ST',
+    //       address: 'Tiện nghi đẳng cấp',
+    //       image: 'images/room-class/SCLASS/50ST/R4_00119.jpg'
+    //     }
+    //   ] 
+    // },
     SuperiorRoom: {
       id: 'SuperiorRoom',
       title: 'Superior Room',
