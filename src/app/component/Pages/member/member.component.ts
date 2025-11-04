@@ -154,7 +154,7 @@ export class MemberComponent extends BaseComponent {
         title: 'Giám đốc nhân sự',
         company: 'Global Tech Firm'
       },
-      backgroundImage: '/images/member-slide/1.png'
+      backgroundImage: '/assets/images/member-slide/1.png'
     },
     {
       id: '2',
@@ -164,7 +164,7 @@ export class MemberComponent extends BaseComponent {
         title: 'Chuyên viên tư vấn',
         company: 'Corporate Travel Agency'
       },
-      backgroundImage: '/images/member-slide/2.png'
+      backgroundImage: '/assets/images/member-slide/2.png'
     },
     {
       id: '3',
@@ -174,7 +174,7 @@ export class MemberComponent extends BaseComponent {
         title: 'Khách hàng thường xuyên',
         company: 'Freelance Consultant'
       },
-      backgroundImage: '/images/member-slide/3.png'
+      backgroundImage: '/assets/images/member-slide/3.png'
     }
   ];
 

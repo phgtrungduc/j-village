@@ -24,7 +24,7 @@ export class OrderComponent extends BaseComponent {
       Id: 'R001',
       Name: 'J VILLAGE PREMIER HOTEL THI SÁCH',
       Description: 'Trải nghiệm một hơi thở Á Đông độc đáo giữa nhịp sống đa sắc màu tại Phố Nhật, Quận 1. M Village Premier Hotel Thi Sách chào đón bạn với 79 căn phòng hiện đại, ngập tràn ánh sáng tự nhiên và tầm nhìn xanh mát từ đường Thi Sách—nơi giao thoa giữa nét đẹp Á Đông và hơi thở Sài Gòn hiện đại. Tại đây, mỗi khoảnh khắc đều được chăm chút để mang đến trải nghiệm tinh tế: từ nhà hàng phong cách đến hồ bơi nhiệt đới duy nhất trong khu vực. Không chỉ dừng lại ở không gian nghỉ dưỡng, hành trình vị giác của bạn sẽ tiếp tục với Every Half và The Lounge—nơi cà phê sáng kéo dài đến những ly cocktail thư giãn sau ngày dài, trở thành điểm hẹn yêu thích của cả người bản địa lẫn du khách. Hãy đến và tận hưởng M Village Premier Hotel Thi Sách theo cách riêng của bạn.',
-      ImageUrl: 'images/room-card-order/1.jpg',
+      ImageUrl: 'assets/images/room-card-order/1.jpg',
       Tags: 'Nghỉ dưỡng, công tác ngắn ngày, Staycation',
       Price: 1850000
     } as Room,
@@ -32,7 +32,7 @@ export class OrderComponent extends BaseComponent {
       Id: 'R002',
       Name: 'J VILLAGE PREMIER HOTEL THI SÁCH',
       Description: 'Trải nghiệm một hơi thở Á Đông độc đáo giữa nhịp sống đa sắc màu tại Phố Nhật, Quận 1. M Village Premier Hotel Thi Sách chào đón bạn với 79 căn phòng hiện đại, ngập tràn ánh sáng tự nhiên và tầm nhìn xanh mát từ đường Thi Sách—nơi giao thoa giữa nét đẹp Á Đông và hơi thở Sài Gòn hiện đại. Tại đây, mỗi khoảnh khắc đều được chăm chút để mang đến trải nghiệm tinh tế: từ nhà hàng phong cách đến hồ bơi nhiệt đới duy nhất trong khu vực. Không chỉ dừng lại ở không gian nghỉ dưỡng, hành trình vị giác của bạn sẽ tiếp tục với Every Half và The Lounge—nơi cà phê sáng kéo dài đến những ly cocktail thư giãn sau ngày dài, trở thành điểm hẹn yêu thích của cả người bản địa lẫn du khách. Hãy đến và tận hưởng M Village Premier Hotel Thi Sách theo cách riêng của bạn.',
-      ImageUrl: 'images/room-card-order/2.jpg',
+      ImageUrl: 'assets/images/room-card-order/2.jpg',
       Tags: 'Nghỉ dưỡng, công tác ngắn ngày, Staycation',
       Price: 1850000
     } as Room,
@@ -40,7 +40,7 @@ export class OrderComponent extends BaseComponent {
       Id: 'R003',
       Name: 'J VILLAGE PREMIER HOTEL THI SÁCH',
       Description: 'Trải nghiệm một hơi thở Á Đông độc đáo giữa nhịp sống đa sắc màu tại Phố Nhật, Quận 1. M Village Premier Hotel Thi Sách chào đón bạn với 79 căn phòng hiện đại, ngập tràn ánh sáng tự nhiên và tầm nhìn xanh mát từ đường Thi Sách—nơi giao thoa giữa nét đẹp Á Đông và hơi thở Sài Gòn hiện đại. Tại đây, mỗi khoảnh khắc đều được chăm chút để mang đến trải nghiệm tinh tế: từ nhà hàng phong cách đến hồ bơi nhiệt đới duy nhất trong khu vực. Không chỉ dừng lại ở không gian nghỉ dưỡng, hành trình vị giác của bạn sẽ tiếp tục với Every Half và The Lounge—nơi cà phê sáng kéo dài đến những ly cocktail thư giãn sau ngày dài, trở thành điểm hẹn yêu thích của cả người bản địa lẫn du khách. Hãy đến và tận hưởng M Village Premier Hotel Thi Sách theo cách riêng của bạn.',
-      ImageUrl: 'images/room-card-order/3.jpg',
+      ImageUrl: 'assets/images/room-card-order/3.jpg',
       Tags: 'Nghỉ dưỡng, công tác ngắn ngày, Staycation',
       Price: 1850000
     } as Room,
@@ -48,7 +48,7 @@ export class OrderComponent extends BaseComponent {
       Id: 'R004',
       Name: 'J VILLAGE PREMIER HOTEL THI SÁCH',
       Description: 'Trải nghiệm một hơi thở Á Đông độc đáo giữa nhịp sống đa sắc màu tại Phố Nhật, Quận 1. M Village Premier Hotel Thi Sách chào đón bạn với 79 căn phòng hiện đại, ngập tràn ánh sáng tự nhiên và tầm nhìn xanh mát từ đường Thi Sách—nơi giao thoa giữa nét đẹp Á Đông và hơi thở Sài Gòn hiện đại. Tại đây, mỗi khoảnh khắc đều được chăm chút để mang đến trải nghiệm tinh tế: từ nhà hàng phong cách đến hồ bơi nhiệt đới duy nhất trong khu vực. Không chỉ dừng lại ở không gian nghỉ dưỡng, hành trình vị giác của bạn sẽ tiếp tục với Every Half và The Lounge—nơi cà phê sáng kéo dài đến những ly cocktail thư giãn sau ngày dài, trở thành điểm hẹn yêu thích của cả người bản địa lẫn du khách. Hãy đến và tận hưởng M Village Premier Hotel Thi Sách theo cách riêng của bạn.',
-      ImageUrl: 'images/room-card-order/4.jpg',
+      ImageUrl: 'assets/images/room-card-order/4.jpg',
       Tags: 'Nghỉ dưỡng, công tác ngắn ngày, Staycation',
       Price: 1850000
     } as Room,
@@ -56,7 +56,7 @@ export class OrderComponent extends BaseComponent {
       Id: 'R004',
       Name: 'J VILLAGE PREMIER HOTEL THI SÁCH',
       Description: 'Trải nghiệm một hơi thở Á Đông độc đáo giữa nhịp sống đa sắc màu tại Phố Nhật, Quận 1. M Village Premier Hotel Thi Sách chào đón bạn với 79 căn phòng hiện đại, ngập tràn ánh sáng tự nhiên và tầm nhìn xanh mát từ đường Thi Sách—nơi giao thoa giữa nét đẹp Á Đông và hơi thở Sài Gòn hiện đại. Tại đây, mỗi khoảnh khắc đều được chăm chút để mang đến trải nghiệm tinh tế: từ nhà hàng phong cách đến hồ bơi nhiệt đới duy nhất trong khu vực. Không chỉ dừng lại ở không gian nghỉ dưỡng, hành trình vị giác của bạn sẽ tiếp tục với Every Half và The Lounge—nơi cà phê sáng kéo dài đến những ly cocktail thư giãn sau ngày dài, trở thành điểm hẹn yêu thích của cả người bản địa lẫn du khách. Hãy đến và tận hưởng M Village Premier Hotel Thi Sách theo cách riêng của bạn.',
-      ImageUrl: 'images/room-card-order/4.jpg',
+      ImageUrl: 'assets/images/room-card-order/4.jpg',
       Tags: 'Nghỉ dưỡng, công tác ngắn ngày, Staycation',
       Price: 1850000
     } as Room,
@@ -64,7 +64,7 @@ export class OrderComponent extends BaseComponent {
       Id: 'R004',
       Name: 'J VILLAGE PREMIER HOTEL THI SÁCH',
       Description: 'Trải nghiệm một hơi thở Á Đông độc đáo giữa nhịp sống đa sắc màu tại Phố Nhật, Quận 1. M Village Premier Hotel Thi Sách chào đón bạn với 79 căn phòng hiện đại, ngập tràn ánh sáng tự nhiên và tầm nhìn xanh mát từ đường Thi Sách—nơi giao thoa giữa nét đẹp Á Đông và hơi thở Sài Gòn hiện đại. Tại đây, mỗi khoảnh khắc đều được chăm chút để mang đến trải nghiệm tinh tế: từ nhà hàng phong cách đến hồ bơi nhiệt đới duy nhất trong khu vực. Không chỉ dừng lại ở không gian nghỉ dưỡng, hành trình vị giác của bạn sẽ tiếp tục với Every Half và The Lounge—nơi cà phê sáng kéo dài đến những ly cocktail thư giãn sau ngày dài, trở thành điểm hẹn yêu thích của cả người bản địa lẫn du khách. Hãy đến và tận hưởng M Village Premier Hotel Thi Sách theo cách riêng của bạn.',
-      ImageUrl: 'images/room-card-order/4.jpg',
+      ImageUrl: 'assets/images/room-card-order/4.jpg',
       Tags: 'Nghỉ dưỡng, công tác ngắn ngày, Staycation',
       Price: 1850000
     } as Room,
@@ -72,7 +72,7 @@ export class OrderComponent extends BaseComponent {
       Id: 'R004',
       Name: 'J VILLAGE PREMIER HOTEL THI SÁCH',
       Description: 'Trải nghiệm một hơi thở Á Đông độc đáo giữa nhịp sống đa sắc màu tại Phố Nhật, Quận 1. M Village Premier Hotel Thi Sách chào đón bạn với 79 căn phòng hiện đại, ngập tràn ánh sáng tự nhiên và tầm nhìn xanh mát từ đường Thi Sách—nơi giao thoa giữa nét đẹp Á Đông và hơi thở Sài Gòn hiện đại. Tại đây, mỗi khoảnh khắc đều được chăm chút để mang đến trải nghiệm tinh tế: từ nhà hàng phong cách đến hồ bơi nhiệt đới duy nhất trong khu vực. Không chỉ dừng lại ở không gian nghỉ dưỡng, hành trình vị giác của bạn sẽ tiếp tục với Every Half và The Lounge—nơi cà phê sáng kéo dài đến những ly cocktail thư giãn sau ngày dài, trở thành điểm hẹn yêu thích của cả người bản địa lẫn du khách. Hãy đến và tận hưởng M Village Premier Hotel Thi Sách theo cách riêng của bạn.',
-      ImageUrl: 'images/room-card-order/4.jpg',
+      ImageUrl: 'assets/images/room-card-order/4.jpg',
       Tags: 'Nghỉ dưỡng, công tác ngắn ngày, Staycation',
       Price: 1850000
     } as Room,
@@ -80,7 +80,7 @@ export class OrderComponent extends BaseComponent {
       Id: 'R004',
       Name: 'J VILLAGE PREMIER HOTEL THI SÁCH',
       Description: 'Trải nghiệm một hơi thở Á Đông độc đáo giữa nhịp sống đa sắc màu tại Phố Nhật, Quận 1. M Village Premier Hotel Thi Sách chào đón bạn với 79 căn phòng hiện đại, ngập tràn ánh sáng tự nhiên và tầm nhìn xanh mát từ đường Thi Sách—nơi giao thoa giữa nét đẹp Á Đông và hơi thở Sài Gòn hiện đại. Tại đây, mỗi khoảnh khắc đều được chăm chút để mang đến trải nghiệm tinh tế: từ nhà hàng phong cách đến hồ bơi nhiệt đới duy nhất trong khu vực. Không chỉ dừng lại ở không gian nghỉ dưỡng, hành trình vị giác của bạn sẽ tiếp tục với Every Half và The Lounge—nơi cà phê sáng kéo dài đến những ly cocktail thư giãn sau ngày dài, trở thành điểm hẹn yêu thích của cả người bản địa lẫn du khách. Hãy đến và tận hưởng M Village Premier Hotel Thi Sách theo cách riêng của bạn.',
-      ImageUrl: 'images/room-card-order/4.jpg',
+      ImageUrl: 'assets/images/room-card-order/4.jpg',
       Tags: 'Nghỉ dưỡng, công tác ngắn ngày, Staycation',
       Price: 1850000
     } as Room,
@@ -88,7 +88,7 @@ export class OrderComponent extends BaseComponent {
       Id: 'R004',
       Name: 'J VILLAGE PREMIER HOTEL THI SÁCH',
       Description: 'Trải nghiệm một hơi thở Á Đông độc đáo giữa nhịp sống đa sắc màu tại Phố Nhật, Quận 1. M Village Premier Hotel Thi Sách chào đón bạn với 79 căn phòng hiện đại, ngập tràn ánh sáng tự nhiên và tầm nhìn xanh mát từ đường Thi Sách—nơi giao thoa giữa nét đẹp Á Đông và hơi thở Sài Gòn hiện đại. Tại đây, mỗi khoảnh khắc đều được chăm chút để mang đến trải nghiệm tinh tế: từ nhà hàng phong cách đến hồ bơi nhiệt đới duy nhất trong khu vực. Không chỉ dừng lại ở không gian nghỉ dưỡng, hành trình vị giác của bạn sẽ tiếp tục với Every Half và The Lounge—nơi cà phê sáng kéo dài đến những ly cocktail thư giãn sau ngày dài, trở thành điểm hẹn yêu thích của cả người bản địa lẫn du khách. Hãy đến và tận hưởng M Village Premier Hotel Thi Sách theo cách riêng của bạn.',
-      ImageUrl: 'images/room-card-order/4.jpg',
+      ImageUrl: 'assets/images/room-card-order/4.jpg',
       Tags: 'Nghỉ dưỡng, công tác ngắn ngày, Staycation',
       Price: 1850000
     } as Room,
@@ -96,7 +96,7 @@ export class OrderComponent extends BaseComponent {
       Id: 'R004',
       Name: 'J VILLAGE PREMIER HOTEL THI SÁCH',
       Description: 'Trải nghiệm một hơi thở Á Đông độc đáo giữa nhịp sống đa sắc màu tại Phố Nhật, Quận 1. M Village Premier Hotel Thi Sách chào đón bạn với 79 căn phòng hiện đại, ngập tràn ánh sáng tự nhiên và tầm nhìn xanh mát từ đường Thi Sách—nơi giao thoa giữa nét đẹp Á Đông và hơi thở Sài Gòn hiện đại. Tại đây, mỗi khoảnh khắc đều được chăm chút để mang đến trải nghiệm tinh tế: từ nhà hàng phong cách đến hồ bơi nhiệt đới duy nhất trong khu vực. Không chỉ dừng lại ở không gian nghỉ dưỡng, hành trình vị giác của bạn sẽ tiếp tục với Every Half và The Lounge—nơi cà phê sáng kéo dài đến những ly cocktail thư giãn sau ngày dài, trở thành điểm hẹn yêu thích của cả người bản địa lẫn du khách. Hãy đến và tận hưởng M Village Premier Hotel Thi Sách theo cách riêng của bạn.',
-      ImageUrl: 'images/room-card-order/4.jpg',
+      ImageUrl: 'assets/images/room-card-order/4.jpg',
       Tags: 'Nghỉ dưỡng, công tác ngắn ngày, Staycation',
       Price: 1850000
     } as Room,
@@ -104,7 +104,7 @@ export class OrderComponent extends BaseComponent {
       Id: 'R004',
       Name: 'J VILLAGE PREMIER HOTEL THI SÁCH',
       Description: 'Trải nghiệm một hơi thở Á Đông độc đáo giữa nhịp sống đa sắc màu tại Phố Nhật, Quận 1. M Village Premier Hotel Thi Sách chào đón bạn với 79 căn phòng hiện đại, ngập tràn ánh sáng tự nhiên và tầm nhìn xanh mát từ đường Thi Sách—nơi giao thoa giữa nét đẹp Á Đông và hơi thở Sài Gòn hiện đại. Tại đây, mỗi khoảnh khắc đều được chăm chút để mang đến trải nghiệm tinh tế: từ nhà hàng phong cách đến hồ bơi nhiệt đới duy nhất trong khu vực. Không chỉ dừng lại ở không gian nghỉ dưỡng, hành trình vị giác của bạn sẽ tiếp tục với Every Half và The Lounge—nơi cà phê sáng kéo dài đến những ly cocktail thư giãn sau ngày dài, trở thành điểm hẹn yêu thích của cả người bản địa lẫn du khách. Hãy đến và tận hưởng M Village Premier Hotel Thi Sách theo cách riêng của bạn.',
-      ImageUrl: 'images/room-card-order/4.jpg',
+      ImageUrl: 'assets/images/room-card-order/4.jpg',
       Tags: 'Nghỉ dưỡng, công tác ngắn ngày, Staycation',
       Price: 1850000
     } as Room,
@@ -112,7 +112,7 @@ export class OrderComponent extends BaseComponent {
       Id: 'R004',
       Name: 'J VILLAGE PREMIER HOTEL THI SÁCH',
       Description: 'Trải nghiệm một hơi thở Á Đông độc đáo giữa nhịp sống đa sắc màu tại Phố Nhật, Quận 1. M Village Premier Hotel Thi Sách chào đón bạn với 79 căn phòng hiện đại, ngập tràn ánh sáng tự nhiên và tầm nhìn xanh mát từ đường Thi Sách—nơi giao thoa giữa nét đẹp Á Đông và hơi thở Sài Gòn hiện đại. Tại đây, mỗi khoảnh khắc đều được chăm chút để mang đến trải nghiệm tinh tế: từ nhà hàng phong cách đến hồ bơi nhiệt đới duy nhất trong khu vực. Không chỉ dừng lại ở không gian nghỉ dưỡng, hành trình vị giác của bạn sẽ tiếp tục với Every Half và The Lounge—nơi cà phê sáng kéo dài đến những ly cocktail thư giãn sau ngày dài, trở thành điểm hẹn yêu thích của cả người bản địa lẫn du khách. Hãy đến và tận hưởng M Village Premier Hotel Thi Sách theo cách riêng của bạn.',
-      ImageUrl: 'images/room-card-order/4.jpg',
+      ImageUrl: 'assets/images/room-card-order/4.jpg',
       Tags: 'Nghỉ dưỡng, công tác ngắn ngày, Staycation',
       Price: 1850000
     } as Room,
@@ -120,7 +120,7 @@ export class OrderComponent extends BaseComponent {
       Id: 'R004',
       Name: 'J VILLAGE PREMIER HOTEL THI SÁCH',
       Description: 'Trải nghiệm một hơi thở Á Đông độc đáo giữa nhịp sống đa sắc màu tại Phố Nhật, Quận 1. M Village Premier Hotel Thi Sách chào đón bạn với 79 căn phòng hiện đại, ngập tràn ánh sáng tự nhiên và tầm nhìn xanh mát từ đường Thi Sách—nơi giao thoa giữa nét đẹp Á Đông và hơi thở Sài Gòn hiện đại. Tại đây, mỗi khoảnh khắc đều được chăm chút để mang đến trải nghiệm tinh tế: từ nhà hàng phong cách đến hồ bơi nhiệt đới duy nhất trong khu vực. Không chỉ dừng lại ở không gian nghỉ dưỡng, hành trình vị giác của bạn sẽ tiếp tục với Every Half và The Lounge—nơi cà phê sáng kéo dài đến những ly cocktail thư giãn sau ngày dài, trở thành điểm hẹn yêu thích của cả người bản địa lẫn du khách. Hãy đến và tận hưởng M Village Premier Hotel Thi Sách theo cách riêng của bạn.',
-      ImageUrl: 'images/room-card-order/4.jpg',
+      ImageUrl: 'assets/images/room-card-order/4.jpg',
       Tags: 'Nghỉ dưỡng, công tác ngắn ngày, Staycation',
       Price: 1850000
     } as Room,
@@ -128,7 +128,7 @@ export class OrderComponent extends BaseComponent {
       Id: 'R004',
       Name: 'J VILLAGE PREMIER HOTEL THI SÁCH',
       Description: 'Trải nghiệm một hơi thở Á Đông độc đáo giữa nhịp sống đa sắc màu tại Phố Nhật, Quận 1. M Village Premier Hotel Thi Sách chào đón bạn với 79 căn phòng hiện đại, ngập tràn ánh sáng tự nhiên và tầm nhìn xanh mát từ đường Thi Sách—nơi giao thoa giữa nét đẹp Á Đông và hơi thở Sài Gòn hiện đại. Tại đây, mỗi khoảnh khắc đều được chăm chút để mang đến trải nghiệm tinh tế: từ nhà hàng phong cách đến hồ bơi nhiệt đới duy nhất trong khu vực. Không chỉ dừng lại ở không gian nghỉ dưỡng, hành trình vị giác của bạn sẽ tiếp tục với Every Half và The Lounge—nơi cà phê sáng kéo dài đến những ly cocktail thư giãn sau ngày dài, trở thành điểm hẹn yêu thích của cả người bản địa lẫn du khách. Hãy đến và tận hưởng M Village Premier Hotel Thi Sách theo cách riêng của bạn.',
-      ImageUrl: 'images/room-card-order/4.jpg',
+      ImageUrl: 'assets/images/room-card-order/4.jpg',
       Tags: 'Nghỉ dưỡng, công tác ngắn ngày, Staycation',
       Price: 1850000
     } as Room,

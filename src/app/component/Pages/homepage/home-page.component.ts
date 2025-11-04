@@ -32,9 +32,9 @@ export class HomePage extends BaseComponent {
       name: 'Deluxe Room',
       description: 'Phòng Deluxe sang trọng',
       rooms: [
-        { name: 'Deluxe P 301', imageUrl: 'images/room-class/DeluxeRoom/P301/R4_00807.jpg' },
-        { name: 'Deluxe P 401', imageUrl: 'images/room-class/DeluxeRoom/P401/R4_00544.jpg' },
-        { name: 'Deluxe P 501', imageUrl: 'images/room-class/DeluxeRoom/P501/R4_00378.jpg' }
+        { name: 'Deluxe P 301', imageUrl: 'assets/images/room-class/DeluxeRoom/P301/R4_00807.jpg' },
+        { name: 'Deluxe P 401', imageUrl: 'assets/images/room-class/DeluxeRoom/P401/R4_00544.jpg' },
+        { name: 'Deluxe P 501', imageUrl: 'assets/images/room-class/DeluxeRoom/P501/R4_00378.jpg' }
       ]
     },
     // {
@@ -42,9 +42,9 @@ export class HomePage extends BaseComponent {
     //   name: 'E Class',
     //   description: 'Phòng E Class hiện đại',
     //   rooms: [
-    //     { name: 'Black Pink', imageUrl: 'images/room-class/ECLASS/BlackPink/R4_00195.jpg' },
-    //     { name: 'Pink Flower', imageUrl: 'images/room-class/ECLASS/PinkFlower/R4_00311.jpg' },
-    //     { name: 'Play Boy', imageUrl: 'images/room-class/ECLASS/PlayBoy/R4_00252.jpg' }
+    //     { name: 'Black Pink', imageUrl: 'assets/images/room-class/ECLASS/BlackPink/R4_00195.jpg' },
+    //     { name: 'Pink Flower', imageUrl: 'assets/images/room-class/ECLASS/PinkFlower/R4_00311.jpg' },
+    //     { name: 'Play Boy', imageUrl: 'assets/images/room-class/ECLASS/PlayBoy/R4_00252.jpg' }
     //   ]
     // },
     // {
@@ -52,9 +52,9 @@ export class HomePage extends BaseComponent {
     //   name: 'S Class',
     //   description: 'Phòng S Class đẳng cấp',
     //   rooms: [
-    //     { name: 'S Class 50 ST - 1', imageUrl: 'images/room-class/SCLASS/50ST/R4_00014.jpg' },
-    //     { name: 'S Class 50 ST - 2', imageUrl: 'images/room-class/SCLASS/50ST/R4_00080.jpg' },
-    //     { name: 'S Class 50 ST - 3', imageUrl: 'images/room-class/SCLASS/50ST/R4_00106.jpg' }
+    //     { name: 'S Class 50 ST - 1', imageUrl: 'assets/images/room-class/SCLASS/50ST/R4_00014.jpg' },
+    //     { name: 'S Class 50 ST - 2', imageUrl: 'assets/images/room-class/SCLASS/50ST/R4_00080.jpg' },
+    //     { name: 'S Class 50 ST - 3', imageUrl: 'assets/images/room-class/SCLASS/50ST/R4_00106.jpg' }
     //   ]
     // },
     {
@@ -62,9 +62,9 @@ export class HomePage extends BaseComponent {
       name: 'Superior Room',
       description: 'Phòng Superior tiện nghi',
       rooms: [
-        { name: 'Superior P 202', imageUrl: 'images/room-class/SuperiorRoom/P202/R4_00443.jpg' },
-        { name: 'Superior P 302', imageUrl: 'images/room-class/SuperiorRoom/P302/R4_00708.jpg' },
-        { name: 'Superior P 402', imageUrl: 'images/room-class/SuperiorRoom/P402/R4_00598.jpg' }
+        { name: 'Superior P 202', imageUrl: 'assets/images/room-class/SuperiorRoom/P202/R4_00443.jpg' },
+        { name: 'Superior P 302', imageUrl: 'assets/images/room-class/SuperiorRoom/P302/R4_00708.jpg' },
+        { name: 'Superior P 402', imageUrl: 'assets/images/room-class/SuperiorRoom/P402/R4_00598.jpg' }
       ]
     }
   ];
@@ -76,84 +76,84 @@ export class HomePage extends BaseComponent {
       Id: 'R001',
       Name: 'J Village Hotel Nguyễn Du',
       Description: 'Giữa lòng Quận 1 sôi động, M Village Hotel Nguyễn Du mang đến không gian tĩnh lặng và thanh bình hiếm có. Ánh sáng tự nhiên, cây xanh và thiết kế tối giản ấm cúng tạo không gian lý tưởng để làm việc, thư giãn với các tiện ích như khu coworking, bếp chung, phòng giặt và khu vườn nhỏ trên sân thượng.',
-      ImageUrl: 'images/room-card/1.jpg',
+      ImageUrl: 'assets/images/room-card/1.jpg',
       ShortAddess: 'Hồ Chí Minh'
     },
     {
       Id: 'R002',
       Name: 'Express By J Village 46 Thảo Điền',
       Description: 'Điểm dừng chân hiện đại giữa lòng Thảo Điền nhộn nhịp. Express by M Village mang đến không gian lưu trú gọn gàng và tiện nghi cùng khu coworking, phòng gym, quầy bar, bếp chung và khu giặt sấy – lý tưởng cho những chuyến công tác hoặc nghỉ ngơi.',
-      ImageUrl: 'images/room-card/2.jpg',
+      ImageUrl: 'assets/images/room-card/2.jpg',
       ShortAddess: 'Hồ Chí Minh'
     },
     {
       Id: 'R003',
       Name: 'J Village Premier Hotel Thi Sách',
       Description: 'Bước vào hành trình du hành Á Đông độc đáo giữa nhịp sống đậm bản sắc tại Phố Nhật, Quận 1. Đến và tận hưởng M Village Premier Hotel Thi Sách ngay hôm nay',
-      ImageUrl: 'images/room-card/3.jpg',
+      ImageUrl: 'assets/images/room-card/3.jpg',
       ShortAddess: 'Hồ Chí Minh'
     },
     {
       Id: 'R001',
       Name: 'J Village Hotel Nguyễn Du',
       Description: 'Giữa lòng Quận 1 sôi động, M Village Hotel Nguyễn Du mang đến không gian tĩnh lặng và thanh bình hiếm có. Ánh sáng tự nhiên, cây xanh và thiết kế tối giản ấm cúng tạo không gian lý tưởng để làm việc, thư giãn với các tiện ích như khu coworking, bếp chung, phòng giặt và khu vườn nhỏ trên sân thượng.',
-      ImageUrl: 'images/room-card/1.jpg',
+      ImageUrl: 'assets/images/room-card/1.jpg',
       ShortAddess: 'Hồ Chí Minh'
     },
     {
       Id: 'R002',
       Name: 'Express By J Village 46 Thảo Điền',
       Description: 'Điểm dừng chân hiện đại giữa lòng Thảo Điền nhộn nhịp. Express by M Village mang đến không gian lưu trú gọn gàng và tiện nghi cùng khu coworking, phòng gym, quầy bar, bếp chung và khu giặt sấy – lý tưởng cho những chuyến công tác hoặc nghỉ ngơi.',
-      ImageUrl: 'images/room-card/2.jpg',
+      ImageUrl: 'assets/images/room-card/2.jpg',
       ShortAddess: 'Hồ Chí Minh'
     },
     {
       Id: 'R003',
       Name: 'J Village Premier Hotel Thi Sách',
       Description: 'Bước vào hành trình du hành Á Đông độc đáo giữa nhịp sống đậm bản sắc tại Phố Nhật, Quận 1. Đến và tận hưởng M Village Premier Hotel Thi Sách ngay hôm nay',
-      ImageUrl: 'images/room-card/3.jpg',
+      ImageUrl: 'assets/images/room-card/3.jpg',
       ShortAddess: 'Hồ Chí Minh'
     },
     {
       Id: 'R001',
       Name: 'J Village Hotel Nguyễn Du',
       Description: 'Giữa lòng Quận 1 sôi động, M Village Hotel Nguyễn Du mang đến không gian tĩnh lặng và thanh bình hiếm có. Ánh sáng tự nhiên, cây xanh và thiết kế tối giản ấm cúng tạo không gian lý tưởng để làm việc, thư giãn với các tiện ích như khu coworking, bếp chung, phòng giặt và khu vườn nhỏ trên sân thượng.',
-      ImageUrl: 'images/room-card/1.jpg',
+      ImageUrl: 'assets/images/room-card/1.jpg',
       ShortAddess: 'Hồ Chí Minh'
     },
     {
       Id: 'R002',
       Name: 'Express By J Village 46 Thảo Điền',
       Description: 'Điểm dừng chân hiện đại giữa lòng Thảo Điền nhộn nhịp. Express by M Village mang đến không gian lưu trú gọn gàng và tiện nghi cùng khu coworking, phòng gym, quầy bar, bếp chung và khu giặt sấy – lý tưởng cho những chuyến công tác hoặc nghỉ ngơi.',
-      ImageUrl: 'images/room-card/2.jpg',
+      ImageUrl: 'assets/images/room-card/2.jpg',
       ShortAddess: 'Hồ Chí Minh'
     },
     {
       Id: 'R003',
       Name: 'J Village Premier Hotel Thi Sách',
       Description: 'Bước vào hành trình du hành Á Đông độc đáo giữa nhịp sống đậm bản sắc tại Phố Nhật, Quận 1. Đến và tận hưởng M Village Premier Hotel Thi Sách ngay hôm nay',
-      ImageUrl: 'images/room-card/3.jpg',
+      ImageUrl: 'assets/images/room-card/3.jpg',
       ShortAddess: 'Hồ Chí Minh'
     },
     {
       Id: 'R001',
       Name: 'J Village Hotel Nguyễn Du',
       Description: 'Giữa lòng Quận 1 sôi động, M Village Hotel Nguyễn Du mang đến không gian tĩnh lặng và thanh bình hiếm có. Ánh sáng tự nhiên, cây xanh và thiết kế tối giản ấm cúng tạo không gian lý tưởng để làm việc, thư giãn với các tiện ích như khu coworking, bếp chung, phòng giặt và khu vườn nhỏ trên sân thượng.',
-      ImageUrl: 'images/room-card/1.jpg',
+      ImageUrl: 'assets/images/room-card/1.jpg',
       ShortAddess: 'Hồ Chí Minh'
     },
     {
       Id: 'R002',
       Name: 'Express By J Village 46 Thảo Điền',
       Description: 'Điểm dừng chân hiện đại giữa lòng Thảo Điền nhộn nhịp. Express by M Village mang đến không gian lưu trú gọn gàng và tiện nghi cùng khu coworking, phòng gym, quầy bar, bếp chung và khu giặt sấy – lý tưởng cho những chuyến công tác hoặc nghỉ ngơi.',
-      ImageUrl: 'images/room-card/2.jpg',
+      ImageUrl: 'assets/images/room-card/2.jpg',
       ShortAddess: 'Hồ Chí Minh'
     },
     {
       Id: 'R003',
       Name: 'J Village Premier Hotel Thi Sách',
       Description: 'Bước vào hành trình du hành Á Đông độc đáo giữa nhịp sống đậm bản sắc tại Phố Nhật, Quận 1. Đến và tận hưởng M Village Premier Hotel Thi Sách ngay hôm nay',
-      ImageUrl: 'images/room-card/3.jpg',
+      ImageUrl: 'assets/images/room-card/3.jpg',
       ShortAddess: 'Hồ Chí Minh'
     },
   ];
@@ -165,37 +165,37 @@ export class HomePage extends BaseComponent {
   storiesList = [
     {
       id: 1,
-      imageUrl: 'images/room-class/DeluxeRoom/P301/R4_00807.jpg',
+      imageUrl: 'assets/images/room-class/DeluxeRoom/P301/R4_00807.jpg',
       title: 'Deluxe Room P301',
       description: 'Phòng Deluxe sang trọng với thiết kế hiện đại'
     },
     {
       id: 2,
-      imageUrl: 'images/room-class/DeluxeRoom/P301/R4_00834.jpg',
+      imageUrl: 'assets/images/room-class/DeluxeRoom/P301/R4_00834.jpg',
       title: 'Deluxe Room View',
       description: 'Không gian rộng rãi và thoải mái'
     },
     {
       id: 3,
-      imageUrl: 'images/room-class/ECLASS/BlackPink/R4_00195.jpg',
+      imageUrl: 'assets/images/room-class/ECLASS/BlackPink/R4_00195.jpg',
       title: 'E Class - Black Pink',
       description: 'Phong cách hiện đại và cá tính'
     },
     {
       id: 4,
-      imageUrl: 'images/room-class/ECLASS/PinkFlower/R4_00311.jpg',
+      imageUrl: 'assets/images/room-class/ECLASS/PinkFlower/R4_00311.jpg',
       title: 'E Class - Pink Flower',
       description: 'Thiết kế lãng mạn và tinh tế'
     },
     {
       id: 5,
-      imageUrl: 'images/room-class/SCLASS/50ST/R4_00014.jpg',
+      imageUrl: 'assets/images/room-class/SCLASS/50ST/R4_00014.jpg',
       title: 'S Class Premium',
       description: 'Đẳng cấp và sang trọng bậc nhất'
     },
     {
       id: 6,
-      imageUrl: 'images/room-class/SuperiorRoom/P202/R4_00443.jpg',
+      imageUrl: 'assets/images/room-class/SuperiorRoom/P202/R4_00443.jpg',
       title: 'Superior Room',
       description: 'Tiện nghi đầy đủ cho nghỉ dưỡng'
     }
