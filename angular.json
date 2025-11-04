@@ -56,7 +56,26 @@
                   "maximumError": "2MB"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "baseHref": "/j-village/",
+              "deployUrl": "/j-village/"
+            },
+            "github-pages": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "10MB",
+                  "maximumError": "15MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "1MB",
+                  "maximumError": "2MB"
+                }
+              ],
+              "outputHashing": "all",
+              "baseHref": "/j-village/",
+              "deployUrl": "/j-village/"
             },
             "development": {
               "optimization": false,
