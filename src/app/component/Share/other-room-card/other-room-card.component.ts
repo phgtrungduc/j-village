@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -13,4 +13,9 @@ export class OtherRoomCardComponent {
   @Input() title: string = '';
   @Input() description: string = '';
   @Input() price: string = '';
+  @Output() onBookRoom = new EventEmitter<void>();
+
+  handleBookRoom(): void {
+    this.onBookRoom.emit();
+  }
 } 

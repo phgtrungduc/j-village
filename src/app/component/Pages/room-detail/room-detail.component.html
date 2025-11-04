@@ -30,7 +30,13 @@
 
 
   <div class="hotel-info">
-    <h2>J Village Premier Hotel Thi Sách</h2>
+    <div class="hotel-header">
+      <h2>J Village Premier Hotel Thi Sách</h2>
+      <button class="book-room-btn" (click)="onBookRoom()">
+        <span>Đặt phòng</span>
+        <i class="fas fa-arrow-right"></i>
+      </button>
+    </div>
     <p>
       Trải nghiệm một hơi thở Á Đông độc đáo giữa nhịp sống đa sắc màu tại Phố Nhật, Quận 1. M Village Premier Hotel Thi Sách...
     </p>
@@ -67,21 +73,24 @@
           imageUrl="images/room-detail/1.jpg"
           title="Phòng Superior bathtub no window"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..."
-          price="1.850.000 VNĐ/đêm">
+          price="1.850.000 VNĐ/đêm"
+          (onBookRoom)="onOtherRoomBook()">
         </other-room-card>
 
         <other-room-card 
           imageUrl="images/room-detail/2.jpg"
           title="Phòng Deluxe with window"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..."
-          price="2.100.000 VNĐ/đêm">
+          price="2.100.000 VNĐ/đêm"
+          (onBookRoom)="onOtherRoomBook()">
         </other-room-card>
 
         <other-room-card 
           imageUrl="images/room-detail/3.jpg"
           title="Phòng Deluxe Twin with bathtub"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..."
-          price="2.350.000 VNĐ/đêm">
+          price="2.350.000 VNĐ/đêm"
+          (onBookRoom)="onOtherRoomBook()">
         </other-room-card>
       </div>
       <div class="view-more">

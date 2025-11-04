@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { AmenityItemComponent } from '../../Share/amenity-item/amenity-item.component';
 import { OtherRoomCardComponent } from '../../Share/other-room-card/other-room-card.component';
+import { BookingHelpers } from '../../../helper/bookingHelper';
 
 @Component({
   selector: 'room-detail',
@@ -17,7 +18,16 @@ export class RoomDetailComponent {
     this.roomId = this.route.snapshot.paramMap.get('id');
     console.log('Room ID:', this.roomId);
   }
+  
   ngOnInit(): void {
 
+  }
+
+  onBookRoom(): void {
+    BookingHelpers.openFacebookBooking();
+  }
+
+  onOtherRoomBook(): void {
+    BookingHelpers.openFacebookBooking();
   }
 }
