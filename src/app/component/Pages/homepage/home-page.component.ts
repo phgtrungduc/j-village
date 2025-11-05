@@ -165,7 +165,7 @@ export class HomePage extends BaseComponent {
   storiesList = [
     {
       id: 1,
-      imageUrl: 'assets/images/room-class/DeluxeRoom/P301/R4_00807.jpg',
+      imageUrl: 'assets/images/stories/1.jpg',
       title: 'Deluxe Room P301',
       description: 'Phòng Deluxe sang trọng với thiết kế hiện đại'
     },
@@ -177,25 +177,25 @@ export class HomePage extends BaseComponent {
     },
     {
       id: 3,
-      imageUrl: 'assets/images/room-class/ECLASS/BlackPink/R4_00195.jpg',
+      imageUrl: 'assets/images/stories/2.jpg',
       title: 'E Class - Black Pink',
       description: 'Phong cách hiện đại và cá tính'
     },
     {
       id: 4,
-      imageUrl: 'assets/images/room-class/ECLASS/PinkFlower/R4_00311.jpg',
+      imageUrl: 'assets/images/stories/3.jpg',
       title: 'E Class - Pink Flower',
       description: 'Thiết kế lãng mạn và tinh tế'
     },
     {
       id: 5,
-      imageUrl: 'assets/images/room-class/SCLASS/50ST/R4_00014.jpg',
+      imageUrl: 'assets/images/room-class/SuperiorRoom/P202/R4_00443.jpg',
       title: 'S Class Premium',
       description: 'Đẳng cấp và sang trọng bậc nhất'
     },
     {
       id: 6,
-      imageUrl: 'assets/images/room-class/SuperiorRoom/P202/R4_00443.jpg',
+      imageUrl: 'assets/images/stories/4.jpg',
       title: 'Superior Room',
       description: 'Tiện nghi đầy đủ cho nghỉ dưỡng'
     }
