@@ -26,7 +26,7 @@ export class OrderComponent extends BaseComponent {
       Description: 'Phòng Superior hiện đại với thiết kế tinh tế, đầy đủ tiện nghi cao cấp. Không gian thoáng đãng với ánh sáng tự nhiên, tạo cảm giác thư thái và thoải mái cho khách lưu trú.',
       ImageUrl: 'assets/images/room-class/SuperiorRoom/P202/R4_00443.jpg',
       Tags: 'Nghỉ dưỡng, công tác ngắn ngày, Staycation',
-      Price: 1850000,
+      Price: 900000,
       RoomClass: 'SuperiorRoom',
       SubFolder: 'P202',
       Images: ['R4_00443.jpg', 'R4_00456.jpg']
@@ -37,7 +37,7 @@ export class OrderComponent extends BaseComponent {
       Description: 'Phòng Superior với view đẹp, thiết kế hiện đại và sang trọng. Trang bị đầy đủ tiện nghi cao cấp, mang lại trải nghiệm lưu trú thoải mái và đẳng cấp.',
       ImageUrl: 'assets/images/room-class/SuperiorRoom/P302/R4_00708.jpg',
       Tags: 'Nghỉ dưỡng, công tác ngắn ngày, Staycation',
-      Price: 1950000,
+      Price: 900000,
       RoomClass: 'SuperiorRoom',
       SubFolder: 'P302',
       Images: ['R4_00708.jpg']
@@ -48,7 +48,7 @@ export class OrderComponent extends BaseComponent {
       Description: 'Phòng Superior cao cấp với không gian rộng rãi và thoáng mát. Thiết kế tinh tế kết hợp với các tiện nghi hiện đại, mang lại sự thoải mái tối đa cho khách hàng.',
       ImageUrl: 'assets/images/room-class/SuperiorRoom/P402/R4_00598.jpg',
       Tags: 'Nghỉ dưỡng, công tác ngắn ngày, Staycation',
-      Price: 2050000,
+      Price: 900000,
       RoomClass: 'SuperiorRoom',
       SubFolder: 'P402',
       Images: ['R4_00598.jpg']
@@ -59,7 +59,7 @@ export class OrderComponent extends BaseComponent {
       Description: 'Phòng Deluxe sang trọng với thiết kế đẳng cấp và view tuyệt đẹp. Không gian rộng rãi, thoải mái với đầy đủ tiện nghi cao cấp, phù hợp cho kỳ nghỉ dưỡng hoàn hảo.',
       ImageUrl: 'assets/images/room-class/DeluxeRoom/P301/R4_00807.jpg',
       Tags: 'Nghỉ dưỡng, công tác ngắn ngày, Staycation',
-      Price: 2350000,
+      Price: 900000,
       RoomClass: 'DeluxeRoom',
       SubFolder: 'P301',
       Images: ['R4_00807.jpg', 'R4_00834.jpg']
@@ -70,7 +70,7 @@ export class OrderComponent extends BaseComponent {
       Description: 'Phòng Deluxe cao cấp với thiết kế sang trọng và tinh tế. Trang bị đầy đủ tiện nghi hiện đại, mang lại trải nghiệm lưu trú đẳng cấp và thoải mái nhất.',
       ImageUrl: 'assets/images/room-class/DeluxeRoom/P401/R4_00544.jpg',
       Tags: 'Nghỉ dưỡng, công tác ngắn ngày, Staycation',
-      Price: 2450000,
+      Price: 900000,
       RoomClass: 'DeluxeRoom',
       SubFolder: 'P401',
       Images: ['R4_00544.jpg']
@@ -81,7 +81,7 @@ export class OrderComponent extends BaseComponent {
       Description: 'Phòng Deluxe tầng cao với view panoramic tuyệt đẹp. Không gian sang trọng, hiện đại với các tiện nghi cao cấp, mang lại trải nghiệm nghỉ dưỡng đẳng cấp.',
       ImageUrl: 'assets/images/room-class/DeluxeRoom/P501/R4_00378.jpg',
       Tags: 'Nghỉ dưỡng, công tác ngắn ngày, Staycation',
-      Price: 2550000,
+      Price: 900000,
       RoomClass: 'DeluxeRoom',
       SubFolder: 'P501',
       Images: ['R4_00378.jpg']
@@ -92,7 +92,7 @@ export class OrderComponent extends BaseComponent {
       Description: 'Phòng E-Class với chủ đề BlackPink độc đáo và sáng tạo. Thiết kế hiện đại, màu sắc nổi bật tạo không gian trẻ trung và năng động, phù hợp cho những ai yêu thích phong cách K-pop.',
       ImageUrl: 'assets/images/room-class/ECLASS/BlackPink/R4_00195.jpg',
       Tags: 'Nghỉ dưỡng, Staycation, Chủ đề đặc biệt',
-      Price: 2800000,
+      Price: 900000,
       RoomClass: 'ECLASS',
       SubFolder: 'BlackPink',
       Images: ['R4_00195.jpg', 'R4_00214.jpg']
@@ -103,7 +103,7 @@ export class OrderComponent extends BaseComponent {
       Description: 'Phòng E-Class với chủ đề hoa hồng lãng mạn và nữ tính. Không gian ấm cúng với tông màu hồng pastel, tạo cảm giác thư thái và lãng mạn cho kỳ nghỉ của bạn.',
       ImageUrl: 'assets/images/room-class/ECLASS/PinkFlower/R4_00311.jpg',
       Tags: 'Nghỉ dưỡng, Staycation, Lãng mạn',
-      Price: 2750000,
+      Price: 900000,
       RoomClass: 'ECLASS',
       SubFolder: 'PinkFlower',
       Images: ['R4_00311.jpg']
@@ -114,7 +114,7 @@ export class OrderComponent extends BaseComponent {
       Description: 'Phòng E-Class với chủ đề PlayBoy sang trọng và quyến rũ. Thiết kế táo bạo với màu sắc đen trắng chủ đạo, tạo không gian hiện đại và cá tính.',
       ImageUrl: 'assets/images/room-class/ECLASS/PlayBoy/R4_00252.jpg',
       Tags: 'Nghỉ dưỡng, Staycation, Cá tính',
-      Price: 2900000,
+      Price: 900000,
       RoomClass: 'ECLASS',
       SubFolder: 'PlayBoy',
       Images: ['R4_00252.jpg']
@@ -125,7 +125,7 @@ export class OrderComponent extends BaseComponent {
       Description: 'Phòng S-Class cao cấp nhất với chủ đề 50 Shades of Grey sang trọng và bí ẩn. Thiết kế đẳng cấp với không gian rộng rãi, tiện nghi 5 sao, mang lại trải nghiệm nghỉ dưỡng đỉnh cao.',
       ImageUrl: 'assets/images/room-class/SCLASS/50ST/R4_00014.jpg',
       Tags: 'Nghỉ dưỡng cao cấp, Staycation, Đẳng cấp',
-      Price: 3500000,
+      Price: 900000,
       RoomClass: 'SCLASS',
       SubFolder: '50ST',
       Images: ['R4_00014.jpg', 'R4_00080.jpg', 'R4_00106.jpg', 'R4_00119.jpg']
