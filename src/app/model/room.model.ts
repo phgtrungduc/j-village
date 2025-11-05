@@ -6,4 +6,7 @@ export interface Room {
   ShortAddess?: string;
   Price?: number;
   Tags?: string;
+  RoomClass?: string;
+  SubFolder?: string;
+  Images?: string[];
 }

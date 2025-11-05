@@ -12,49 +12,177 @@
 
 
     .image-container {
-        display: flex;
-        gap: 1rem;
         width: 100%;
         max-width: 1200px;
         margin: auto;
+        height: 400px;
 
-        .left-image {
-            flex: 1;
+        // Style chung cho tất cả ảnh
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 16px;
+        }
 
-            img {
-                width: 100%;
+        // 1 ảnh - hiển thị full width
+        .single-image {
+            width: 100%;
+            height: 100%;
+        }
+
+        // 2 ảnh - chia đôi
+        .two-images {
+            display: flex;
+            gap: 1rem;
+            height: 100%;
+
+            .image-half {
+                flex: 1;
                 height: 100%;
-                object-fit: cover;
-                border-radius: 16px;
             }
         }
 
-        .right-grid {
-            flex: 1;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
+        // 3 ảnh - 1 lớn bên trái, 2 nhỏ bên phải
+        .three-images {
+            display: flex;
             gap: 1rem;
+            height: 100%;
 
-            div {
-                position: relative;
+            .left-image {
+                flex: 1;
+                height: 100%;
+            }
 
-                img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    border-radius: 16px;
+            .right-images {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+
+                .small-image {
+                    flex: 1;
+                }
+            }
+        }
+
+        // 4 ảnh - 1 lớn bên trái, 3 nhỏ bên phải
+        .four-images {
+            display: flex;
+            gap: 1rem;
+            height: 100%;
+
+            .left-image {
+                flex: 1;
+                height: 100%;
+            }
+
+            .right-grid {
+                flex: 1;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                gap: 1rem;
+
+                .small-image {
+                    position: relative;
+
+                    &:nth-child(3) {
+                        grid-column: 1 / -1;
+                    }
+                }
+            }
+        }
+
+        // 5+ ảnh - layout như cũ
+        .five-plus-images {
+            display: flex;
+            gap: 1rem;
+            height: 100%;
+
+            .left-image {
+                flex: 1;
+                height: 100%;
+            }
+
+            .right-grid {
+                flex: 1;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                gap: 1rem;
+
+                .small-image {
+                    position: relative;
+
+                    &.image-with-overlay .overlay {
+                        position: absolute;
+                        bottom: 8px;
+                        right: 12px;
+                        background-color: rgba(0, 0, 0, 0.6);
+                        color: $white;
+                        padding: 0.3rem 0.6rem;
+                        font-size: 0.8rem;
+                        border-radius: 999px;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+
+        // Fallback cho trường hợp không có ảnh
+        .no-images {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: lighten($gray, 45%);
+            border-radius: 16px;
+
+            img {
+                max-width: 200px;
+                max-height: 200px;
+                opacity: 0.5;
+            }
+        }
+
+        // Responsive design
+        @media (max-width: 768px) {
+            height: 300px;
+
+            .two-images,
+            .three-images,
+            .four-images,
+            .five-plus-images {
+                flex-direction: column;
+                
+                .left-image,
+                .right-grid,
+                .right-images {
+                    flex: none;
+                    height: 50%;
                 }
 
-                &.image-with-overlay .overlay {
-                    position: absolute;
-                    bottom: 8px;
-                    right: 12px;
-                    background-color: rgba(0, 0, 0, 0.6);
-                    color: $white;
-                    padding: 0.3rem 0.6rem;
-                    font-size: 0.8rem;
-                    border-radius: 999px;
+                .right-grid {
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: 1fr;
+                }
+
+                .right-images {
+                    flex-direction: row;
+                }
+            }
+        }
+
+        @media (max-width: 480px) {
+            height: 250px;
+
+            .two-images .image-half,
+            .right-images .small-image,
+            .right-grid .small-image {
+                &:not(:first-child) {
+                    display: none;
                 }
             }
         }
