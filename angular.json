@@ -61,9 +61,7 @@
                   "maximumError": "2MB"
                 }
               ],
-              "outputHashing": "all",
-              "baseHref": "/j-village/",
-              "deployUrl": "/j-village/"
+              "outputHashing": "all"
             },
             "github-pages": {
               "budgets": [
