@@ -6,7 +6,9 @@
                 <h1>JVILLAGE HOUSE</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incididunt ut labore et
                     dolore magna aliqua.</p>
-                <button class="btn btn-primary btn-rounded">Khám phá</button>
+                <button class="btn btn-primary btn-rounded" routerLink="/order">
+                    Đặt phòng
+                </button>
             </div>
 
             <div class="stats">
@@ -54,7 +56,7 @@
                     <!-- Danh sách phòng -->
                     <div class="room-list">
                         <div class="room-card"
-                            *ngFor="let room of filteredRooms | paginate: { itemsPerPage: 4, currentPage: page, id: 'room-pagination'}">
+                            *ngFor="let room of filteredRooms | paginate: { itemsPerPage: 6, currentPage: page, id: 'room-pagination'}">
                             <div class="image">
                                 <img [src]="room.imageUrl" [alt]="room.name" loading="lazy">
                                 <div class="info">
@@ -64,7 +66,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="flex justify-center">
+                    <div class="flex justify-center mt-2.5">
                         <!-- <pagination-controls (pageChange)="page = $event" paginationTemplate="customTpl">
                         </pagination-controls> -->
 
@@ -128,5 +130,7 @@
         </div>
     </div>
 
-    <app-member-section></app-member-section>
+    <div class="member-section-wrapper">
+        <app-member-section></app-member-section>
+    </div>
 </div>

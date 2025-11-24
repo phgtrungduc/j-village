@@ -28,9 +28,9 @@ export class BrandComponent extends BaseComponent {
   
   amenities: {[key: string]: Amenity} = {
     DeluxeRoom: {
-      id: 'DeluxeRoom',
-      title: 'Deluxe Room',
-      description: 'Phòng Deluxe sang trọng với thiết kế hiện đại, không gian rộng rãi và đầy đủ tiện nghi cao cấp. Lựa chọn hoàn hảo cho những ai đề cao sự thoải mái và tiện nghi trong suốt thời gian lưu trú.',
+      id: 'Không gian chung',
+      title: '',
+      description: 'Không gian chung',
       image: 'assets/images/room-class/DeluxeRoom/P301/R4_00807.jpg',
       locations: [
         {

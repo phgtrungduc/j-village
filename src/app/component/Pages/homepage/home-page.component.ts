@@ -11,11 +11,12 @@ import { MemberSectionComponent } from '../../Share/member-section/member-sectio
 import { Room } from '../../../model/room.model';
 import { CommonModule } from '@angular/common';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { RouterModule } from '@angular/router';
 @Component({
   selector: 'home-page',
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.scss',
-  imports: [Footer, Header, RoomCardComponent, MemberSectionComponent, CommonModule, NgxPaginationModule
+  imports: [Footer, Header, RoomCardComponent, MemberSectionComponent, CommonModule, NgxPaginationModule, RouterModule
   ]
 })
 export class HomePage extends BaseComponent {
@@ -34,29 +35,32 @@ export class HomePage extends BaseComponent {
       rooms: [
         { name: 'Deluxe P 301', imageUrl: 'assets/images/room-class/DeluxeRoom/P301/R4_00807.jpg' },
         { name: 'Deluxe P 401', imageUrl: 'assets/images/room-class/DeluxeRoom/P401/R4_00544.jpg' },
-        { name: 'Deluxe P 501', imageUrl: 'assets/images/room-class/DeluxeRoom/P501/R4_00378.jpg' }
+        { name: 'Deluxe P 501', imageUrl: 'assets/images/room-class/DeluxeRoom/P501/R4_00378.jpg' },
+        { name: 'Deluxe P 401 View', imageUrl: 'assets/images/room-class/DeluxeRoom/P401/R4_00564.jpg' },
+        { name: 'Deluxe P 501 Suite', imageUrl: 'assets/images/room-class/DeluxeRoom/P501/R4_00391.jpg' },
+        { name: 'Deluxe P 601', imageUrl: 'assets/images/room-class/DeluxeRoom/P601/R4_00193.jpg' }
       ]
     },
-    // {
-    //   id: 'eclass',
-    //   name: 'E Class',
-    //   description: 'Phòng E Class hiện đại',
-    //   rooms: [
-    //     { name: 'Black Pink', imageUrl: 'assets/images/room-class/ECLASS/BlackPink/R4_00195.jpg' },
-    //     { name: 'Pink Flower', imageUrl: 'assets/images/room-class/ECLASS/PinkFlower/R4_00311.jpg' },
-    //     { name: 'Play Boy', imageUrl: 'assets/images/room-class/ECLASS/PlayBoy/R4_00252.jpg' }
-    //   ]
-    // },
-    // {
-    //   id: 'sclass',
-    //   name: 'S Class',
-    //   description: 'Phòng S Class đẳng cấp',
-    //   rooms: [
-    //     { name: 'S Class 50 ST - 1', imageUrl: 'assets/images/room-class/SCLASS/50ST/R4_00014.jpg' },
-    //     { name: 'S Class 50 ST - 2', imageUrl: 'assets/images/room-class/SCLASS/50ST/R4_00080.jpg' },
-    //     { name: 'S Class 50 ST - 3', imageUrl: 'assets/images/room-class/SCLASS/50ST/R4_00106.jpg' }
-    //   ]
-    // },
+    {
+      id: 'executive',
+      name: 'Executive Suite',
+      description: 'Hạng phòng cao cấp với tiện nghi sang trọng',
+      rooms: [
+        { name: 'Executive Skyline', imageUrl: 'assets/images/room-class/ExecutiveSuite/Skyline/R4_00014.jpg' },
+        { name: 'Executive Luxe', imageUrl: 'assets/images/room-class/ExecutiveSuite/Luxe/R4_00080.jpg' },
+        { name: 'Executive Royal', imageUrl: 'assets/images/room-class/ExecutiveSuite/Royal/R4_00106.jpg' }
+      ]
+    },
+    {
+      id: 'boutique',
+      name: 'Boutique Loft',
+      description: 'Không gian loft cá tính và nghệ thuật',
+      rooms: [
+        { name: 'Velvet Loft', imageUrl: 'assets/images/room-class/BoutiqueLoft/Velvet/R4_00214.jpg' },
+        { name: 'Floral Loft', imageUrl: 'assets/images/room-class/BoutiqueLoft/Floral/R4_00311.jpg' },
+        { name: 'Neon Loft', imageUrl: 'assets/images/room-class/BoutiqueLoft/Neon/R4_00252.jpg' }
+      ]
+    },
     {
       id: 'superior',
       name: 'Superior Room',
@@ -64,7 +68,9 @@ export class HomePage extends BaseComponent {
       rooms: [
         { name: 'Superior P 202', imageUrl: 'assets/images/room-class/SuperiorRoom/P202/R4_00443.jpg' },
         { name: 'Superior P 302', imageUrl: 'assets/images/room-class/SuperiorRoom/P302/R4_00708.jpg' },
-        { name: 'Superior P 402', imageUrl: 'assets/images/room-class/SuperiorRoom/P402/R4_00598.jpg' }
+        { name: 'Superior P 402', imageUrl: 'assets/images/room-class/SuperiorRoom/P402/R4_00598.jpg' },
+        { name: 'Superior P 203', imageUrl: 'assets/images/room-class/SuperiorRoom/P203/R4_00132.jpg' },
+        { name: 'Superior P 303', imageUrl: 'assets/images/room-class/SuperiorRoom/P303/R4_00757.jpg' }
       ]
     }
   ];

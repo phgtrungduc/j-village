@@ -14,84 +14,103 @@
 
 
   <!-- Grid hiển thị ảnh linh hoạt -->
-  <div class="image-container" [ngClass]="'images-' + roomImages.length" *ngIf="roomImages.length > 0">
-    
-    <!-- Trường hợp 1 ảnh -->
-    <div *ngIf="roomImages.length === 1" class="single-image">
-      <img [src]="roomImages[0]" [alt]="currentRoom?.Name" />
-    </div>
-    
-    <!-- Trường hợp 2 ảnh -->
-    <div *ngIf="roomImages.length === 2" class="two-images">
-      <div class="image-half">
-        <img [src]="roomImages[0]" [alt]="currentRoom?.Name + ' - Ảnh 1'" />
-      </div>
-      <div class="image-half">
-        <img [src]="roomImages[1]" [alt]="currentRoom?.Name + ' - Ảnh 2'" />
-      </div>
-    </div>
-    
-    <!-- Trường hợp 3 ảnh -->
-    <div *ngIf="roomImages.length === 3" class="three-images">
-      <div class="left-image">
-        <img [src]="roomImages[0]" [alt]="currentRoom?.Name + ' - Ảnh chính'" />
-      </div>
-      <div class="right-images">
-        <div class="small-image">
-          <img [src]="roomImages[1]" [alt]="currentRoom?.Name + ' - Ảnh 2'" />
+  <div class="image-container" *ngIf="roomImages.length; else noRoomImages">
+    <ng-container [ngSwitch]="roomImages.length">
+
+      <!-- Layout 3 ảnh -->
+      <div *ngSwitchCase="3" class="three-images">
+        <div class="left-image">
+          <img [src]="roomImages[0]" [alt]="currentRoom?.Name + ' - Ảnh chính'">
         </div>
-        <div class="small-image">
-          <img [src]="roomImages[2]" [alt]="currentRoom?.Name + ' - Ảnh 3'" />
+        <div class="right-images">
+          <div class="small-image">
+            <img [src]="roomImages[1]" [alt]="currentRoom?.Name + ' - Ảnh 2'">
+          </div>
+          <div class="small-image">
+            <img [src]="roomImages[2]" [alt]="currentRoom?.Name + ' - Ảnh 3'">
+          </div>
         </div>
       </div>
-    </div>
-    
-    <!-- Trường hợp 4 ảnh -->
-    <div *ngIf="roomImages.length === 4" class="four-images">
-      <div class="left-image">
-        <img [src]="roomImages[0]" [alt]="currentRoom?.Name + ' - Ảnh chính'" />
-      </div>
-      <div class="right-grid">
-        <div class="small-image">
-          <img [src]="roomImages[1]" [alt]="currentRoom?.Name + ' - Ảnh 2'" />
+
+      <!-- Layout 4 ảnh -->
+      <div *ngSwitchCase="4" class="four-images">
+        <div class="left-image">
+          <img [src]="roomImages[0]" [alt]="currentRoom?.Name + ' - Ảnh chính'">
         </div>
-        <div class="small-image">
-          <img [src]="roomImages[2]" [alt]="currentRoom?.Name + ' - Ảnh 3'" />
-        </div>
-        <div class="small-image">
-          <img [src]="roomImages[3]" [alt]="currentRoom?.Name + ' - Ảnh 4'" />
+        <div class="right-grid">
+          <div class="small-image" *ngFor="let image of roomImages.slice(1, 4); let idx = index">
+            <img [src]="image" [alt]="currentRoom?.Name + ' - Ảnh ' + (idx + 2)">
+          </div>
         </div>
       </div>
-    </div>
-    
-    <!-- Trường hợp 5+ ảnh (như thiết kế cũ) -->
-    <div *ngIf="roomImages.length >= 5" class="five-plus-images">
-      <div class="left-image">
-        <img [src]="roomImages[0]" [alt]="currentRoom?.Name + ' - Ảnh chính'" />
-      </div>
-      <div class="right-grid">
-        <div class="small-image">
-          <img [src]="roomImages[1]" [alt]="currentRoom?.Name + ' - Ảnh 2'" />
+
+      <!-- Layout 5 ảnh -->
+      <div *ngSwitchCase="5" class="five-images">
+        <div class="left-image">
+          <img [src]="roomImages[0]" [alt]="currentRoom?.Name + ' - Ảnh chính'">
         </div>
-        <div class="small-image">
-          <img [src]="roomImages[2]" [alt]="currentRoom?.Name + ' - Ảnh 3'" />
-        </div>
-        <div class="small-image">
-          <img [src]="roomImages[3]" [alt]="currentRoom?.Name + ' - Ảnh 4'" />
-        </div>
-        <div class="image-with-overlay small-image">
-          <img [src]="roomImages[4]" [alt]="currentRoom?.Name + ' - Ảnh 5'" />
-          <div class="overlay" *ngIf="roomImages.length > 5">{{roomImages.length - 4}}+</div>
+        <div class="right-grid">
+          <div class="small-image" *ngFor="let image of roomImages.slice(1); let idx = index">
+            <img [src]="image" [alt]="currentRoom?.Name + ' - Ảnh ' + (idx + 2)">
+          </div>
         </div>
       </div>
-    </div>
-    
+
+      <!-- Layout 6 ảnh -->
+      <div *ngSwitchCase="6" class="six-images">
+        <div class="column column-large">
+          <img [src]="roomImages[0]" [alt]="currentRoom?.Name + ' - Ảnh chính'">
+          <div class="bottom-row">
+            <img [src]="roomImages[1]" [alt]="currentRoom?.Name + ' - Ảnh 2'">
+            <img [src]="roomImages[2]" [alt]="currentRoom?.Name + ' - Ảnh 3'">
+          </div>
+        </div>
+        <div class="column column-grid">
+          <div class="small-image" *ngFor="let image of roomImages.slice(3); let idx = index">
+            <img [src]="image" [alt]="currentRoom?.Name + ' - Ảnh ' + (idx + 4)">
+          </div>
+        </div>
+      </div>
+
+      <!-- Layout mặc định cho <3 hoặc >6 -->
+      <div *ngSwitchDefault class="default-images">
+        <div *ngIf="roomImages.length === 1" class="single-image">
+          <img [src]="roomImages[0]" [alt]="currentRoom?.Name">
+        </div>
+
+        <div *ngIf="roomImages.length === 2" class="two-images">
+          <div class="image-half">
+            <img [src]="roomImages[0]" [alt]="currentRoom?.Name + ' - Ảnh 1'">
+          </div>
+          <div class="image-half">
+            <img [src]="roomImages[1]" [alt]="currentRoom?.Name + ' - Ảnh 2'">
+          </div>
+        </div>
+
+        <div *ngIf="roomImages.length > 6" class="five-plus-images">
+          <div class="left-image">
+            <img [src]="roomImages[0]" [alt]="currentRoom?.Name + ' - Ảnh chính'">
+          </div>
+          <div class="right-grid">
+            <div class="small-image" *ngFor="let image of roomImages.slice(1, 5); let idx = index">
+              <img [src]="image" [alt]="currentRoom?.Name + ' - Ảnh ' + (idx + 2)">
+            </div>
+            <div class="image-with-overlay small-image" *ngIf="roomImages.length > 5">
+              <img [src]="roomImages[5]" [alt]="currentRoom?.Name + ' - Ảnh 6'">
+              <div class="overlay" *ngIf="roomImages.length > 6">+{{ roomImages.length - 6 }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </ng-container>
   </div>
 
-  <!-- Fallback nếu không có ảnh -->
-  <div *ngIf="roomImages.length === 0" class="no-images">
-    <img src="assets/images/default-room.png" alt="Ảnh mặc định" />
-  </div>
+  <ng-template #noRoomImages>
+    <div class="no-images">
+      <img src="assets/images/default-room.png" alt="Ảnh mặc định">
+    </div>
+  </ng-template>
 
 
   <div class="hotel-info">

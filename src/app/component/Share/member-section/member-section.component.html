@@ -7,8 +7,12 @@
                 <p class="description">{{ description }}</p>
 
                 <div class="flex gap-2" *ngIf="showButtons">
-                    <button class="btn btn-secondary btn-rounded">{{ secondaryButtonText }}</button>
-                    <button class="btn btn-primary btn-rounded">{{ primaryButtonText }}</button>
+                    <button class="btn btn-secondary btn-rounded" routerLink="/order">
+                        {{ secondaryButtonText }}
+                    </button>
+                    <button class="btn btn-primary btn-rounded" routerLink="/member">
+                        {{ primaryButtonText }}
+                    </button>
                 </div>
             </div>
         </div>
