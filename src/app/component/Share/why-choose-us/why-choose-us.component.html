@@ -1,0 +1,19 @@
+<div class="why-choose-us-section">
+  <div class="container">
+    <h2 class="section-title">TẠI SAO CHỌN J VILLAGE?</h2>
+    
+    <div class="items-grid">
+      <div 
+        *ngFor="let item of items; let i = index" 
+        class="why-choose-item"
+        [attr.data-index]="i">
+        <div class="icon-wrapper">
+          <i [class]="item.icon"></i>
+        </div>
+        <h3 class="item-title">{{ item.title }}</h3>
+        <p class="item-description">{{ item.description }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+

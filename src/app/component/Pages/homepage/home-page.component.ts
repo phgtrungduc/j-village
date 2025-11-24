@@ -8,6 +8,7 @@ import { Footer } from '../../Common/footer/footer.component';
 import { Header } from '../../Common/header/header.component';
 import { RoomCardComponent } from '../../Share/room-card/room-card.component';
 import { MemberSectionComponent } from '../../Share/member-section/member-section.component';
+import { WhyChooseUsComponent } from '../../Share/why-choose-us/why-choose-us.component';
 import { Room } from '../../../model/room.model';
 import { CommonModule } from '@angular/common';
 import { NgxPaginationModule } from 'ngx-pagination';
@@ -16,7 +17,7 @@ import { RouterModule } from '@angular/router';
   selector: 'home-page',
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.scss',
-  imports: [Footer, Header, RoomCardComponent, MemberSectionComponent, CommonModule, NgxPaginationModule, RouterModule
+  imports: [Footer, Header, RoomCardComponent, MemberSectionComponent, WhyChooseUsComponent, CommonModule, NgxPaginationModule, RouterModule
   ]
 })
 export class HomePage extends BaseComponent {
