@@ -11,7 +11,10 @@
           <i [class]="item.icon"></i>
         </div>
         <h3 class="item-title">{{ item.title }}</h3>
-        <p class="item-description">{{ item.description }}</p>
+        <p class="item-description">
+          {{ item.description }}
+          <a *ngIf="i === 5" routerLink="/member" class="learn-more-link"> Tìm hiểu thêm</a>
+        </p>
       </div>
     </div>
   </div>

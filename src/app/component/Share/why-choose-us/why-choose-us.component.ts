@@ -1,44 +1,45 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-why-choose-us',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './why-choose-us.component.html',
   styleUrls: ['./why-choose-us.component.scss']
 })
 export class WhyChooseUsComponent implements OnInit {
   items = [
     {
-      icon: 'fas fa-bolt',
-      title: 'Đặt phòng nhanh chóng',
-      description: 'Quy trình đặt phòng đơn giản, chỉ vài phút là hoàn tất'
+      icon: 'fas fa-map-marker-alt',
+      title: 'Vị trí đắc địa',
+      description: '45 địa điểm được chọn lọc tại các vị trí thuận tiện nhất.'
     },
     {
-      icon: 'fas fa-shield-alt',
-      title: 'Thanh toán an toàn',
-      description: 'Hệ thống thanh toán bảo mật, an toàn tuyệt đối'
+      icon: 'fas fa-building',
+      title: 'Đa dạng phân khúc',
+      description: '1700+ phòng – 4 thương hiệu – đáp ứng linh hoạt mọi nhu cầu.'
     },
     {
-      icon: 'fas fa-headset',
-      title: 'Hỗ trợ 24/7',
-      description: 'Đội ngũ chăm sóc khách hàng luôn sẵn sàng hỗ trợ'
+      icon: 'fas fa-percent',
+      title: 'Đặc quyền ưu đãi',
+      description: 'Giá tốt hơn – Chính sách linh hoạt - Điều khoản rõ ràng.'
     },
     {
-      icon: 'fas fa-tag',
-      title: 'Ưu đãi độc quyền',
-      description: 'Nhiều chương trình khuyến mãi hấp dẫn dành riêng cho bạn'
+      icon: 'fas fa-headphones',
+      title: 'Hỗ trợ chuyên biệt',
+      description: 'Luôn đồng hành – Phản hồi nhanh'
     },
     {
-      icon: 'fas fa-star',
-      title: 'Điểm thưởng tích lũy',
-      description: 'Tích điểm với mỗi lần đặt phòng và đổi thành quà tặng'
+      icon: 'fas fa-sync-alt',
+      title: 'Tiết kiệm thời gian',
+      description: 'Quy trình tối giản – Nhanh gọn mọi khâu - Trải nghiệm tuyệt vời!'
     },
     {
-      icon: 'fas fa-gift',
-      title: 'Đổi quà miễn phí',
-      description: 'Sử dụng điểm tích lũy để đổi các phần quà giá trị'
+      icon: 'fas fa-ribbon',
+      title: 'Chương trình thành viên cho doanh nghiệp',
+      description: 'Trở thành hội viên Bạc dễ dàng & nhanh chóng.'
     }
   ];
 

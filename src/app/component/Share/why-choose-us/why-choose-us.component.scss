@@ -87,6 +87,17 @@
       color: $gray;
       line-height: 1.6;
       margin: 0;
+
+      .learn-more-link {
+        color: $primary;
+        text-decoration: underline;
+        cursor: pointer;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: darken($primary, 10%);
+        }
+      }
     }
   }
 }
