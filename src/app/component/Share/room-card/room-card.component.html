@@ -7,6 +7,14 @@
     <p class="text-sm text-gray-700 mt-2 line-clamp-2">
       {{currentRoom.Description}}
     </p>
-    <button class="mt-4 btn-primary px-4 py-2 btn btn-rounded">Khám phá →</button>
+    <ng-container *ngIf="currentRoom.ExternalUrl; else defaultExplore">
+      <button type="button" class="mt-4 btn-primary px-4 py-2 btn btn-rounded"
+        (click)="openExternal($event, currentRoom.ExternalUrl)">
+        Khám phá →
+      </button>
+    </ng-container>
+    <ng-template #defaultExplore>
+      <button class="mt-4 btn-primary px-4 py-2 btn btn-rounded">Khám phá →</button>
+    </ng-template>
   </div>
 </div>

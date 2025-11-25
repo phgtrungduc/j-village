@@ -4,6 +4,7 @@ export interface Room {
   Description: string;
   Name: string;
   ShortAddess?: string;
+  ExternalUrl?: string;
   Price?: number;
   Tags?: string;
   RoomClass?: string;

@@ -28,25 +28,25 @@ export class BrandComponent extends BaseComponent {
   
   amenities: {[key: string]: Amenity} = {
     DeluxeRoom: {
-      id: 'Không gian chung',
-      title: '',
+      id: '0',
+      title: 'Không gian chung',
       description: 'Không gian chung',
-      image: 'assets/images/room-class/DeluxeRoom/P301/R4_00807.jpg',
+      image: 'assets/images/common-space/NMH00704.jpg',
       locations: [
         {
-          name: 'Deluxe Room P 301',
-          address: 'Tầng 3',
-          image: 'assets/images/room-class/DeluxeRoom/P301/R4_00834.jpg'
+          name: 'Không gian chung',
+          address: 'Không gian chung 2',
+          image: 'assets/images/common-space/NMH00726.jpg'
         },
         {
-          name: 'Deluxe Room P 401',
-          address: 'Tầng 4',
-          image: 'assets/images/room-class/DeluxeRoom/P401/R4_00544.jpg'
+          name: 'Không gian chung',
+          address: 'Không gian chung 3',
+          image: 'assets/images/common-space/NMH00912.jpg'
         },
         {
-          name: 'Deluxe Room P 501',
-          address: 'Tầng 5',
-          image: 'assets/images/room-class/DeluxeRoom/P501/R4_00378.jpg'
+          name: 'Không gian chung',
+          address: 'Không gian chung 4',
+          image: 'assets/images/common-space/NMH01013.jpg'
         },
       ] 
     },
