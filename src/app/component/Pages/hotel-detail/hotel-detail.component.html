@@ -1,0 +1,64 @@
+<div class="hotel-detail-container" *ngIf="currentHotel; else notFound">
+  <!-- Breadcrumb Navigation -->
+  <nav class="breadcrumb-nav">
+    <a (click)="navigateToHome()" class="breadcrumb-link">Trang chủ</a>
+    <span class="breadcrumb-separator">></span>
+    <span class="breadcrumb-current">Khám phá</span>
+    <span class="breadcrumb-separator">></span>
+    <span class="breadcrumb-current">{{ currentHotel.Name }}</span>
+  </nav>
+
+  <!-- Main Title -->
+  <h1 class="main-title">{{ currentHotel.Name }}</h1>
+
+  <!-- Introduction Paragraph -->
+  <div class="intro-section">
+    <p class="intro-text">
+      {{ currentHotel.Description }}
+    </p>
+  </div>
+
+  <!-- Main Image -->
+  <div class="main-image-section" *ngIf="currentHotel.ImageUrl">
+    <img [src]="currentHotel.ImageUrl" [alt]="currentHotel.Name" class="main-image">
+  </div>
+
+  <!-- Content Sections - Dynamic content từ biến -->
+  <section class="content-section" *ngFor="let section of contentSections">
+    <h2 class="section-title" *ngIf="section.title">
+      {{ section.title }}
+    </h2>
+    
+    <h3 class="subsection-title" *ngIf="section.subtitle">
+      {{ section.subtitle }}
+    </h3>
+    
+    <!-- Section Image -->
+    <div class="section-image" *ngIf="section.imageUrl">
+      <img [src]="section.imageUrl" [alt]="section.title || section.subtitle" class="section-img">
+    </div>
+    
+    <div class="section-content">
+      <p *ngFor="let paragraph of section.paragraphs">
+        {{ paragraph }}
+      </p>
+      
+      <ul class="amenities-list" *ngIf="section.items && section.items.length > 0">
+        <li *ngFor="let item of section.items">✓ {{ item }}</li>
+      </ul>
+    </div>
+  </section>
+</div>
+
+<ng-template #notFound>
+  <div class="hotel-detail-container">
+    <div class="not-found-message">
+      <h2>Không tìm thấy thông tin khách sạn</h2>
+      <p>Khách sạn với ID: {{ hotelId }} không tồn tại.</p>
+      <button class="btn btn-primary btn-rounded" (click)="navigateToHome()">
+        Về trang chủ
+      </button>
+    </div>
+  </div>
+</ng-template>
+
