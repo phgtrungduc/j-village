@@ -1,3 +1,11 @@
+export interface ContentSection {
+  title?: string;
+  subtitle?: string;
+  paragraphs?: string[];
+  items?: string[];
+  imageUrl?: string;
+}
+
 export interface Room {
   Id: string;
   ImageUrl: string;
@@ -10,4 +18,5 @@ export interface Room {
   RoomClass?: string;
   SubFolder?: string;
   Images?: string[];
+  ContentSections?: ContentSection[];
 }

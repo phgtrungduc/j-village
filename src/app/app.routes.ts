@@ -5,6 +5,7 @@ import { OrderComponent } from './component/Pages/order/order.component';
 import { BrandComponent } from './component/Pages/brand/brand.component';
 import { RoomDetailComponent } from './component/Pages/room-detail/room-detail.component';
 import { MemberComponent } from './component/Pages/member/member.component';
+import { HotelDetailComponent } from './component/Pages/hotel-detail/hotel-detail.component';
 
 export const routes: Routes = [
   // {
@@ -38,6 +39,11 @@ export const routes: Routes = [
     // Route mới cho RoomDetailComponent, nhận Id phòng qua tham số 'id'
     path: 'room/:id',
     component: RoomDetailComponent,
+  },
+  {
+    // Route cho HotelDetailComponent, nhận Id hotel qua tham số 'id'
+    path: 'hotel/:id',
+    component: HotelDetailComponent,
   },
   {
     path: 'member',
