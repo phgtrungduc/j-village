@@ -380,6 +380,7 @@
 
             .view-more {
                 text-align: center;
+                margin-top: 2rem;
 
                 .view-more-btn {
                     padding: 1rem 2rem;
@@ -390,10 +391,16 @@
                     font-size: 1rem;
                     font-weight: 600;
                     cursor: pointer;
-                    transition: background-color 0.2s ease;
+                    transition: all 0.3s ease;
 
                     &:hover {
                         background-color: darken($primary, 10%);
+                        transform: translateY(-2px);
+                        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+                    }
+
+                    &:active {
+                        transform: translateY(0);
                     }
                 }
             }

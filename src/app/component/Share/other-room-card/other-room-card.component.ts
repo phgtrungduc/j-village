@@ -13,9 +13,15 @@ export class OtherRoomCardComponent {
   @Input() title: string = '';
   @Input() description: string = '';
   @Input() price: string = '';
+  @Input() roomId: string = '';
   @Output() onBookRoom = new EventEmitter<void>();
+  @Output() onClick = new EventEmitter<string>();
 
   handleBookRoom(): void {
     this.onBookRoom.emit();
+  }
+
+  handleCardClick(): void {
+    this.onClick.emit(this.roomId);
   }
 } 
