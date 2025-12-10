@@ -48,7 +48,7 @@ header {
   }
 
   &.scrolled {
-    background-color: white; // red-600
+    background-color: $primary; // red-600
 
     .header-container {
       color: black;

@@ -42,26 +42,26 @@ export class HomePage extends BaseComponent {
         { name: 'Deluxe P 601', imageUrl: 'assets/images/room-class/DeluxeRoom/P601/R4_00193.jpg' }
       ]
     },
-    {
-      id: 'executive',
-      name: 'Executive Suite',
-      description: 'Hạng phòng cao cấp với tiện nghi sang trọng',
-      rooms: [
-        { name: 'Executive Skyline', imageUrl: 'assets/images/room-class/ExecutiveSuite/Skyline/R4_00014.jpg' },
-        { name: 'Executive Luxe', imageUrl: 'assets/images/room-class/ExecutiveSuite/Luxe/R4_00080.jpg' },
-        { name: 'Executive Royal', imageUrl: 'assets/images/room-class/ExecutiveSuite/Royal/R4_00106.jpg' }
-      ]
-    },
-    {
-      id: 'boutique',
-      name: 'Boutique Loft',
-      description: 'Không gian loft cá tính và nghệ thuật',
-      rooms: [
-        { name: 'Velvet Loft', imageUrl: 'assets/images/room-class/BoutiqueLoft/Velvet/R4_00214.jpg' },
-        { name: 'Floral Loft', imageUrl: 'assets/images/room-class/BoutiqueLoft/Floral/R4_00311.jpg' },
-        { name: 'Neon Loft', imageUrl: 'assets/images/room-class/BoutiqueLoft/Neon/R4_00252.jpg' }
-      ]
-    },
+    // {
+    //   id: 'executive',
+    //   name: 'Executive Suite',
+    //   description: 'Hạng phòng cao cấp với tiện nghi sang trọng',
+    //   rooms: [
+    //     { name: 'Executive Skyline', imageUrl: 'assets/images/room-class/ExecutiveSuite/Skyline/R4_00014.jpg' },
+    //     { name: 'Executive Luxe', imageUrl: 'assets/images/room-class/ExecutiveSuite/Luxe/R4_00080.jpg' },
+    //     { name: 'Executive Royal', imageUrl: 'assets/images/room-class/ExecutiveSuite/Royal/R4_00106.jpg' }
+    //   ]
+    // },
+    // {
+    //   id: 'boutique',
+    //   name: 'Boutique Loft',
+    //   description: 'Không gian loft cá tính và nghệ thuật',
+    //   rooms: [
+    //     { name: 'Velvet Loft', imageUrl: 'assets/images/room-class/BoutiqueLoft/Velvet/R4_00214.jpg' },
+    //     { name: 'Floral Loft', imageUrl: 'assets/images/room-class/BoutiqueLoft/Floral/R4_00311.jpg' },
+    //     { name: 'Neon Loft', imageUrl: 'assets/images/room-class/BoutiqueLoft/Neon/R4_00252.jpg' }
+    //   ]
+    // },
     {
       id: 'superior',
       name: 'Superior Room',
