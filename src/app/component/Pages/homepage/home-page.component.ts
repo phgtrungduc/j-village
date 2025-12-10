@@ -82,25 +82,25 @@ export class HomePage extends BaseComponent {
     {
       Id: 'ART001',
       Name: 'Cẩm nang du lịch Hà Nội',
-      Description: 'Vietnam Airlines gợi ý lịch trình, điểm tham quan và kinh nghiệm ăn ở để bạn khám phá Hà Nội trọn vẹn từng mùa.',
+      Description: 'Jvillage gợi ý lịch trình, điểm tham quan và kinh nghiệm ăn ở để bạn khám phá Hà Nội trọn vẹn từng mùa.',
       ImageUrl: 'assets/images/common-space/NMH00704.jpg',
-      ShortAddess: 'Vietnam Airlines',
+      ShortAddess: 'Jvillage',
       ExternalUrl: 'https://www.vietnamairlines.com/vn/vi/useful-information/travel-guide/du-lich-ha-noi'
     },
     {
       Id: 'ART002',
       Name: 'Phố cà phê Triệu Việt Vương',
-      Description: 'Hanoiera Hotel kể câu chuyện về con phố cà phê lâu đời, nơi phản chiếu nhịp sống chậm rãi của người Tràng An.',
+      Description: 'Jvillage kể câu chuyện về con phố cà phê lâu đời, nơi phản chiếu nhịp sống chậm rãi của người Jvillage.',
       ImageUrl: 'assets/images/common-space/NMH00726.jpg',
-      ShortAddess: 'Hanoiera Hotel',
+      ShortAddess: 'Jvillage',
       ExternalUrl: 'https://hanoierahotel.com/pho-ca-phe-trieu-viet-vuong/'
     },
     {
       Id: 'ART003',
       Name: '10 điểm du lịch văn hóa hàng đầu Việt Nam',
-      Description: 'Tràng An Travel tuyển chọn những địa điểm đậm bản sắc từ Bắc vào Nam cho hành trình khám phá văn hóa.',
+      Description: 'Jvillage tuyển chọn những địa điểm đậm bản sắc từ Bắc vào Nam cho hành trình khám phá văn hóa.',
       ImageUrl: 'assets/images/common-space/NMH00912.jpg',
-      ShortAddess: 'Tràng An Travel',
+      ShortAddess: 'Jvillage',
       ExternalUrl: 'https://www.trangantravel.com.vn/kham-pha-10-dia-diem-du-lich-van-hoa-hang-dau-o-viet-nam.html'
     },
     {
