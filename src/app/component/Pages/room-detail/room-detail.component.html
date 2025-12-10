@@ -19,14 +19,14 @@
 
       <!-- Layout 3 ảnh -->
       <div *ngSwitchCase="3" class="three-images">
-        <div class="left-image">
+        <div class="left-image" (click)="openGallery(0)">
           <img [src]="roomImages[0]" [alt]="currentRoom?.Name + ' - Ảnh chính'">
         </div>
         <div class="right-images">
-          <div class="small-image">
+          <div class="small-image" (click)="openGallery(1)">
             <img [src]="roomImages[1]" [alt]="currentRoom?.Name + ' - Ảnh 2'">
           </div>
-          <div class="small-image">
+          <div class="small-image" (click)="openGallery(2)">
             <img [src]="roomImages[2]" [alt]="currentRoom?.Name + ' - Ảnh 3'">
           </div>
         </div>
@@ -34,11 +34,11 @@
 
       <!-- Layout 4 ảnh -->
       <div *ngSwitchCase="4" class="four-images">
-        <div class="left-image">
+        <div class="left-image" (click)="openGallery(0)">
           <img [src]="roomImages[0]" [alt]="currentRoom?.Name + ' - Ảnh chính'">
         </div>
         <div class="right-grid">
-          <div class="small-image" *ngFor="let image of roomImages.slice(1, 4); let idx = index">
+          <div class="small-image" *ngFor="let image of roomImages.slice(1, 4); let idx = index" (click)="openGallery(idx + 1)">
             <img [src]="image" [alt]="currentRoom?.Name + ' - Ảnh ' + (idx + 2)">
           </div>
         </div>
@@ -46,11 +46,11 @@
 
       <!-- Layout 5 ảnh -->
       <div *ngSwitchCase="5" class="five-images">
-        <div class="left-image">
+        <div class="left-image" (click)="openGallery(0)">
           <img [src]="roomImages[0]" [alt]="currentRoom?.Name + ' - Ảnh chính'">
         </div>
         <div class="right-grid">
-          <div class="small-image" *ngFor="let image of roomImages.slice(1); let idx = index">
+          <div class="small-image" *ngFor="let image of roomImages.slice(1); let idx = index" (click)="openGallery(idx + 1)">
             <img [src]="image" [alt]="currentRoom?.Name + ' - Ảnh ' + (idx + 2)">
           </div>
         </div>
@@ -59,14 +59,14 @@
       <!-- Layout 6 ảnh -->
       <div *ngSwitchCase="6" class="six-images">
         <div class="column column-large">
-          <img [src]="roomImages[0]" [alt]="currentRoom?.Name + ' - Ảnh chính'">
+          <img [src]="roomImages[0]" [alt]="currentRoom?.Name + ' - Ảnh chính'" (click)="openGallery(0)">
           <div class="bottom-row">
-            <img [src]="roomImages[1]" [alt]="currentRoom?.Name + ' - Ảnh 2'">
-            <img [src]="roomImages[2]" [alt]="currentRoom?.Name + ' - Ảnh 3'">
+            <img [src]="roomImages[1]" [alt]="currentRoom?.Name + ' - Ảnh 2'" (click)="openGallery(1)">
+            <img [src]="roomImages[2]" [alt]="currentRoom?.Name + ' - Ảnh 3'" (click)="openGallery(2)">
           </div>
         </div>
         <div class="column column-grid">
-          <div class="small-image" *ngFor="let image of roomImages.slice(3); let idx = index">
+          <div class="small-image" *ngFor="let image of roomImages.slice(3); let idx = index" (click)="openGallery(idx + 3)">
             <img [src]="image" [alt]="currentRoom?.Name + ' - Ảnh ' + (idx + 4)">
           </div>
         </div>
@@ -74,28 +74,28 @@
 
       <!-- Layout mặc định cho <3 hoặc >6 -->
       <div *ngSwitchDefault class="default-images">
-        <div *ngIf="roomImages.length === 1" class="single-image">
+        <div *ngIf="roomImages.length === 1" class="single-image" (click)="openGallery(0)">
           <img [src]="roomImages[0]" [alt]="currentRoom?.Name">
         </div>
 
         <div *ngIf="roomImages.length === 2" class="two-images">
-          <div class="image-half">
+          <div class="image-half" (click)="openGallery(0)">
             <img [src]="roomImages[0]" [alt]="currentRoom?.Name + ' - Ảnh 1'">
           </div>
-          <div class="image-half">
+          <div class="image-half" (click)="openGallery(1)">
             <img [src]="roomImages[1]" [alt]="currentRoom?.Name + ' - Ảnh 2'">
           </div>
         </div>
 
         <div *ngIf="roomImages.length > 6" class="five-plus-images">
-          <div class="left-image">
+          <div class="left-image" (click)="openGallery(0)">
             <img [src]="roomImages[0]" [alt]="currentRoom?.Name + ' - Ảnh chính'">
           </div>
           <div class="right-grid">
-            <div class="small-image" *ngFor="let image of roomImages.slice(1, 5); let idx = index">
+            <div class="small-image" *ngFor="let image of roomImages.slice(1, 5); let idx = index" (click)="openGallery(idx + 1)">
               <img [src]="image" [alt]="currentRoom?.Name + ' - Ảnh ' + (idx + 2)">
             </div>
-            <div class="image-with-overlay small-image" *ngIf="roomImages.length > 5">
+            <div class="image-with-overlay small-image" *ngIf="roomImages.length > 5" (click)="openGallery(5)">
               <img [src]="roomImages[5]" [alt]="currentRoom?.Name + ' - Ảnh 6'">
               <div class="overlay" *ngIf="roomImages.length > 6">+{{ roomImages.length - 6 }}</div>
             </div>
@@ -179,6 +179,43 @@
       </div>
       <div class="view-more">
         <button class="view-more-btn">Xem thêm</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Image Gallery Modal -->
+  <div class="image-gallery-modal" *ngIf="isGalleryOpen" (click)="closeGallery()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <!-- Close button -->
+      <button class="close-btn" (click)="closeGallery()">
+        <i class="fas fa-times"></i>
+      </button>
+
+      <!-- Main image -->
+      <div class="main-image-container">
+        <button class="nav-btn prev-btn" (click)="previousImage()" *ngIf="roomImages.length > 1">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+
+        <div class="main-image">
+          <img [src]="roomImages[currentImageIndex]" [alt]="currentRoom?.Name">
+          <div class="image-counter">{{ currentImageIndex + 1 }} / {{ roomImages.length }}</div>
+        </div>
+
+        <button class="nav-btn next-btn" (click)="nextImage()" *ngIf="roomImages.length > 1">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+
+      <!-- Thumbnail strip -->
+      <div class="thumbnail-strip" *ngIf="roomImages.length > 1">
+        <div 
+          class="thumbnail" 
+          *ngFor="let image of roomImages; let i = index"
+          [class.active]="i === currentImageIndex"
+          (click)="goToImage(i)">
+          <img [src]="image" [alt]="currentRoom?.Name + ' - Ảnh ' + (i + 1)">
+        </div>
       </div>
     </div>
   </div>

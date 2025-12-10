@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { AmenityItemComponent } from '../../Share/amenity-item/amenity-item.component';
@@ -16,6 +16,10 @@ export class RoomDetailComponent {
   roomId: string | null = null;
   currentRoom: Room | null = null;
   roomImages: string[] = [];
+  
+  // Image gallery modal states
+  isGalleryOpen: boolean = false;
+  currentImageIndex: number = 0;
 
   // Dữ liệu phòng tương tự như trong order.component.ts
   rooms: Room[] = [
@@ -256,5 +260,47 @@ export class RoomDetailComponent {
 
   onOtherRoomBook(): void {
     BookingHelpers.openFacebookBooking();
+  }
+
+  // Image gallery functions
+  openGallery(index: number): void {
+    this.currentImageIndex = index;
+    this.isGalleryOpen = true;
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+  }
+
+  closeGallery(): void {
+    this.isGalleryOpen = false;
+    document.body.style.overflow = 'auto';
+  }
+
+  nextImage(): void {
+    this.currentImageIndex = (this.currentImageIndex + 1) % this.roomImages.length;
+  }
+
+  previousImage(): void {
+    this.currentImageIndex = (this.currentImageIndex - 1 + this.roomImages.length) % this.roomImages.length;
+  }
+
+  goToImage(index: number): void {
+    this.currentImageIndex = index;
+  }
+
+  // Keyboard navigation
+  @HostListener('document:keydown', ['$event'])
+  handleKeyboardEvent(event: KeyboardEvent): void {
+    if (!this.isGalleryOpen) return;
+
+    switch(event.key) {
+      case 'Escape':
+        this.closeGallery();
+        break;
+      case 'ArrowLeft':
+        this.previousImage();
+        break;
+      case 'ArrowRight':
+        this.nextImage();
+        break;
+    }
   }
 }
