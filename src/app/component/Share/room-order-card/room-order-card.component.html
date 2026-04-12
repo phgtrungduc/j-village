@@ -25,21 +25,98 @@
             <!-- <amenity-item icon="fas fa-dumbbell" text="Gym"></amenity-item> -->
         </div>
 
-        <button class="choose-btn btn btn-primary btn-rounded" [routerLink]="['/room', currentRoom.Id]">Chọn phòng</button>
+        <div class="action-buttons">
+            <a class="choose-btn btn btn-primary btn-rounded" [routerLink]="['/room', currentRoom.Id]">Chọn phòng</a>
+            <button type="button" class="detail-offer-btn btn btn-rounded" (click)="openPricingModal()">
+                <span class="detail-offer-btn__label">Chi tiết ưu đãi</span>
+            </button>
+        </div>
     </div>
 
     <div class="price-section">
         <div class="price-info">
-            <div class="price-label">CHỈ TỪ</div>
+            <div class="price-label">GIÁ NIÊM YẾT</div>
             <div class="price-amount">{{currentRoom.Price | vndCurrency}}</div>
-            <div class="price-unit">Đồng / Đêm</div>
+            <div class="price-unit">Đồng</div>
             <div class="price-note">Đã bao gồm thuế phí</div>
         </div>
         <div class="price-info">
-            <div class="price-label">CHỈ TỪ</div>
-            <div class="price-amount">1.400.000</div>
-            <div class="price-unit">Đồng / Ngày</div>
-            <div class="price-note">Đã bao gồm thuế phí</div>
+            <div class="price-label">GIÁ NGHỈ GIỜ</div>
+            <div class="price-amount">{{ currentRoom.HourlyPrice | vndCurrency }}</div>
+            <div class="price-unit">Đồng</div>
+            <div class="price-note">Ưu đãi T2–T6, 8h–18h · Đã bao gồm thuế phí</div>
         </div>
+    </div>
+</div>
+
+<div
+    *ngIf="pricingModalOpen"
+    class="pricing-modal-backdrop"
+    role="presentation"
+    (click)="closePricingModal()"
+>
+    <div
+        class="pricing-modal-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="pricing-modal-title"
+        (click)="$event.stopPropagation()"
+    >
+        <div class="pricing-modal-header">
+            <h2 id="pricing-modal-title">Bảng giá theo hạng phòng</h2>
+            <button type="button" class="pricing-modal-close" aria-label="Đóng" (click)="closePricingModal()">×</button>
+        </div>
+
+        <ng-container *ngIf="activePricingRow as row; else noPricing">
+            <div class="pricing-table-wrap">
+                <table class="pricing-table">
+                    <thead>
+                        <tr>
+                            <th rowspan="2" scope="col" class="th-room">Hạng phòng</th>
+                            <th colspan="5" scope="colgroup" class="th-section">Nghỉ giờ</th>
+                            <th colspan="4" scope="colgroup" class="th-section">Qua đêm</th>
+                            <th colspan="4" scope="colgroup" class="th-section">Nghỉ ngày</th>
+                        </tr>
+                        <tr>
+                            <th scope="col" class="th-listed">Giá niêm yết</th>
+                            <th scope="col">Ưu đãi T2–T6<br /><span class="th-sub">8h–18h</span></th>
+                            <th scope="col">Ưu đãi T2–T6<br /><span class="th-sub">18h–8h sáng hôm sau</span></th>
+                            <th scope="col">T7, CN<br /><span class="th-sub">Đặt trước</span></th>
+                            <th scope="col">T7, CN<br /><span class="th-sub">Đến trực tiếp</span></th>
+                            <th scope="col" class="th-listed">Giá niêm yết</th>
+                            <th scope="col">Ưu đãi<br /><span class="th-sub">T2–T6</span></th>
+                            <th scope="col">T7, CN<br /><span class="th-sub">Đặt trước</span></th>
+                            <th scope="col">T7, CN<br /><span class="th-sub">Đến trực tiếp</span></th>
+                            <th scope="col" class="th-listed">Giá niêm yết</th>
+                            <th scope="col">Ưu đãi<br /><span class="th-sub">Dưới 5 ngày</span></th>
+                            <th scope="col">Ưu đãi<br /><span class="th-sub">5–15 ngày</span></th>
+                            <th scope="col">Ưu đãi<br /><span class="th-sub">Trên 15 ngày</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row" class="td-room">{{ row.label }}</th>
+                            <td class="td-listed">{{ row.hourly[0] | vndCurrency }}</td>
+                            <td>{{ row.hourly[1] | vndCurrency }}</td>
+                            <td>{{ row.hourly[2] | vndCurrency }}</td>
+                            <td>{{ row.hourly[3] | vndCurrency }}</td>
+                            <td>{{ row.hourly[4] | vndCurrency }}</td>
+                            <td class="td-listed">{{ row.overnight[0] | vndCurrency }}</td>
+                            <td>{{ row.overnight[1] | vndCurrency }}</td>
+                            <td>{{ row.overnight[2] | vndCurrency }}</td>
+                            <td>{{ row.overnight[3] | vndCurrency }}</td>
+                            <td class="td-listed">{{ row.daily[0] | vndCurrency }}</td>
+                            <td>{{ row.daily[1] | vndCurrency }}</td>
+                            <td>{{ row.daily[2] | vndCurrency }}</td>
+                            <td>{{ row.daily[3] | vndCurrency }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="pricing-modal-note">Đơn vị: đồng. Giá đã bao gồm thuế phí (theo chính sách áp dụng).</p>
+        </ng-container>
+        <ng-template #noPricing>
+            <p class="pricing-modal-empty">Chưa có bảng giá chi tiết cho hạng phòng này.</p>
+        </ng-template>
     </div>
 </div>

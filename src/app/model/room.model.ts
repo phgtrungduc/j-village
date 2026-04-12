@@ -14,6 +14,8 @@ export interface Room {
   ShortAddess?: string;
   ExternalUrl?: string;
   Price?: number;
+  /** Gia uu dai nghi gio: T2-T6 8h-18h (VND) */
+  HourlyPrice?: number;
   Tags?: string;
   RoomClass?: string;
   SubFolder?: string;
