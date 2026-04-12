@@ -5,7 +5,14 @@ header {
   transition: background-color 0.3s ease;
 
   .header-container {
+    position: relative;
     color: white;
+
+    nav {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
 
     .menu {
       list-style: none;

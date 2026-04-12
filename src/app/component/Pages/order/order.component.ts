@@ -23,8 +23,32 @@ import { AppStates, getAllRooms } from '../../../store/app-state';
 })
 export class OrderComponent extends BaseComponent implements OnInit {
   rooms$!: Observable<Room[]>;
-  rooms: Room[] = [];
+  allRooms: Room[] = [];
+  filteredRooms: Room[] = [];
 
+  selectedRoomClass: 'all' | string = 'all';
+
+  readonly roomClassTabs: { value: string; label: string }[] = [
+    { value: 'all', label: 'Tất cả' },
+    { value: 'DeluxeRoom', label: 'Deluxe Room' },
+    { value: 'SuperiorRoom', label: 'Superior Room' },
+  ];
+
+  selectRoomClass(value: string): void {
+    this.selectedRoomClass = value;
+    this.page = 1;
+    this.applyRoomClassFilter();
+  }
+
+  private applyRoomClassFilter(): void {
+    if (this.selectedRoomClass === 'all') {
+      this.filteredRooms = this.allRooms;
+      return;
+    }
+    this.filteredRooms = this.allRooms.filter(
+      (room) => room.RoomClass === this.selectedRoomClass
+    );
+  }
 
     //sldier
   price = 5400000;
@@ -49,8 +73,9 @@ export class OrderComponent extends BaseComponent implements OnInit {
     this.rooms$ = this.store.select(getAllRooms);
     
     // Subscribe to rooms to get the array for local use if needed
-    this.rooms$.subscribe(rooms => {
-      this.rooms = rooms;
+    this.rooms$.subscribe((rooms) => {
+      this.allRooms = rooms;
+      this.applyRoomClassFilter();
     });
   }
 }

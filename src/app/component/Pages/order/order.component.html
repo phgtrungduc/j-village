@@ -126,6 +126,19 @@
 
 
 <div class="room-order">
+  <div class="room-class-filters" role="tablist" aria-label="Lọc theo hạng phòng">
+    <button
+      type="button"
+      class="room-class-filter-btn"
+      *ngFor="let tab of roomClassTabs"
+      role="tab"
+      [attr.aria-selected]="selectedRoomClass === tab.value"
+      [class.active]="selectedRoomClass === tab.value"
+      (click)="selectRoomClass(tab.value)"
+    >
+      {{ tab.label }}
+    </button>
+  </div>
   <!-- <div class="search-bar mr-100 ml-100">
     <div class="search-item">
       <span class="label">Nhận phòng</span>
@@ -147,7 +160,7 @@
   <div class="body-section">
     <div class="wraper flex gap-3">
       <div class="room-list flex flex-col flex-3 gap-4">
-        <div *ngFor="let room of rooms | paginate: { itemsPerPage: 5, currentPage: page, id: 'room-pagination'}">
+        <div *ngFor="let room of filteredRooms | paginate: { itemsPerPage: 5, currentPage: page, id: 'room-pagination'}">
           <room-order-card [currentRoom]="room"></room-order-card>
         </div>
         <div class="flex justify-center">

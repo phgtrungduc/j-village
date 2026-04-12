@@ -294,6 +294,38 @@
 
 .room-order {
   margin-top: 150px;
+
+  .room-class-filters {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: clamp(0.5rem, 2vw, 0.75rem);
+    margin-bottom: clamp(1rem, 3vw, 1.5rem);
+    padding-inline: clamp(0.5rem, 4vw, 2.5rem);
+  }
+
+  .room-class-filter-btn {
+    padding: clamp(0.4rem, 1.5vw, 0.55rem) clamp(0.85rem, 3vw, 1.25rem);
+    font-size: clamp(0.85rem, 2vw, 0.95rem);
+    font-weight: 500;
+    border-radius: 999px;
+    border: 1px solid $line-border;
+    background-color: $white;
+    color: $text-color;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+
+    &:hover {
+      border-color: $primary;
+      color: $primary;
+    }
+
+    &.active {
+      background-color: $primary;
+      border-color: $primary;
+      color: $white;
+    }
+  }
 }
 
 .content {

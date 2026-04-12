@@ -34,12 +34,13 @@ export class HomePage extends BaseComponent {
       name: 'Deluxe Room',
       description: 'Phòng Deluxe sang trọng',
       rooms: [
-        { name: 'Deluxe P 301', imageUrl: 'assets/images/room-class/DeluxeRoom/P301/R4_00807.jpg' },
-        { name: 'Deluxe P 401', imageUrl: 'assets/images/room-class/DeluxeRoom/P401/R4_00544.jpg' },
-        { name: 'Deluxe P 501', imageUrl: 'assets/images/room-class/DeluxeRoom/P501/R4_00378.jpg' },
+        { name: 'Deluxe P 301', imageUrl: 'assets/images/room-class/DeluxeRoom/P301/R4_00834.jpg' },
+        { name: 'Deluxe P 401', imageUrl: 'assets/images/room-class/DeluxeRoom/P401/R4_00579.jpg' },
+        { name: 'Deluxe P 501', imageUrl: 'assets/images/room-class/DeluxeRoom/P501/R4_00400.jpg' },
         { name: 'Deluxe P 401 View', imageUrl: 'assets/images/room-class/DeluxeRoom/P401/R4_00564.jpg' },
         { name: 'Deluxe P 501 Suite', imageUrl: 'assets/images/room-class/DeluxeRoom/P501/R4_00391.jpg' },
-        { name: 'Deluxe P 601', imageUrl: 'assets/images/room-class/DeluxeRoom/P601/R4_00193.jpg' }
+        { name: 'Deluxe P 601', imageUrl: 'assets/images/room-class/DeluxeRoom/P601/R4_00193.jpg' },
+        { name: 'Deluxe P 701', imageUrl: 'assets/images/room-class/DeluxeRoom/P701/R4_00032.jpg' }
       ]
     },
     // {
@@ -67,9 +68,9 @@ export class HomePage extends BaseComponent {
       name: 'Superior Room',
       description: 'Phòng Superior tiện nghi',
       rooms: [
-        { name: 'Superior P 202', imageUrl: 'assets/images/room-class/SuperiorRoom/P202/R4_00443.jpg' },
-        { name: 'Superior P 302', imageUrl: 'assets/images/room-class/SuperiorRoom/P302/R4_00708.jpg' },
-        { name: 'Superior P 402', imageUrl: 'assets/images/room-class/SuperiorRoom/P402/R4_00598.jpg' },
+        { name: 'Superior P 202', imageUrl: 'assets/images/room-class/SuperiorRoom/P202/R4_00456.jpg' },
+        { name: 'Superior P 302', imageUrl: 'assets/images/room-class/SuperiorRoom/P302/R4_00726.jpg' },
+        { name: 'Superior P 402', imageUrl: 'assets/images/room-class/SuperiorRoom/P402/R4_00623.jpg' },
         { name: 'Superior P 203', imageUrl: 'assets/images/room-class/SuperiorRoom/P203/R4_00132.jpg' },
         { name: 'Superior P 303', imageUrl: 'assets/images/room-class/SuperiorRoom/P303/R4_00757.jpg' }
       ]
@@ -199,7 +200,7 @@ export class HomePage extends BaseComponent {
     },
     {
       id: 5,
-      imageUrl: 'assets/images/room-class/SuperiorRoom/P202/R4_00443.jpg',
+      imageUrl: 'assets/images/room-class/SuperiorRoom/P202/R4_00456.jpg',
       title: 'S Class Premium',
       description: 'Đẳng cấp và sang trọng bậc nhất'
     },

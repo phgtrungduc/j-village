@@ -100,7 +100,7 @@ export class BrandComponent extends BaseComponent {
       id: 'SuperiorRoom',
       title: 'Superior Room',
       description: 'Phòng Superior với không gian thoải mái, thiết kế tinh tế và đầy đủ tiện nghi. Lựa chọn lý tưởng cho cả chuyến công tác và nghỉ dưỡng với chất lượng dịch vụ đáng tin cậy.',
-      image: 'assets/images/room-class/SuperiorRoom/P202/R4_00443.jpg',
+      image: 'assets/images/room-class/SuperiorRoom/P202/R4_00456.jpg',
       locations: [
         {
           name: 'Superior Room P 202',
@@ -110,12 +110,12 @@ export class BrandComponent extends BaseComponent {
         {
           name: 'Superior Room P 302',
           address: 'Tầng 3',
-          image: 'assets/images/room-class/SuperiorRoom/P302/R4_00708.jpg'
+          image: 'assets/images/room-class/SuperiorRoom/P302/R4_00726.jpg'
         },
         {
           name: 'Superior Room P 402',
           address: 'Tầng 4',
-          image: 'assets/images/room-class/SuperiorRoom/P402/R4_00598.jpg'
+          image: 'assets/images/room-class/SuperiorRoom/P402/R4_00623.jpg'
         }
       ] 
     }
